@@ -1,0 +1,42 @@
+
+@font-face {
+  font-family: 'Canela Medium';
+  src: url('./Canela-Medium.otf')
+}
+
+@font-face {
+  font-family: 'Canela';
+  src: url('./Canela-Regular.otf')
+}
+
+@font-face {
+  font-family: 'SF';
+  src: url('./SF-Pro-Display-Regular.otf') format('OpenType')
+}
+
+@font-face {
+  font-family: 'SF Light';
+  src: url('./SF-Pro-Display-Light.otf') format('OpenType')
+}
+
+@font-face {
+  font-family: 'SF Semi';
+  src: url('./SF-Pro-Display-Semibold.otf') format('OpenType')
+}
+
+@font-face {
+  font-family: 'Nimbus';
+  src: url('./Nimbus Sans/NimbusSansNovusTOT-Reg.otf') format('OpenType')
+}
+@font-face {
+  font-family: 'Nimbus-Light';
+  src: url('./Nimbus Sans/NimbusSansNovusTOT-Lig.otf') format('OpenType')
+}
+@font-face {
+  font-family: 'Nimbus-Bold';
+  src: url('./Nimbus Sans/NimbusSansNovusTOT-Bol.otf') format('OpenType')
+}
+@font-face {
+  font-family: 'Nimbus-Black';
+  src: url('./Nimbus Sans/NimbusSansNovusTOT-Bla.otf') format('OpenType')
+}

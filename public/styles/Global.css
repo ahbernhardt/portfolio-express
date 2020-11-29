@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Canela Medium';
+    src: url('./fonts/Canela-Medium.otf')
+}
+
+@font-face {
+    font-family: 'Canela';
+    src: url('./fonts/Canela-Regular.otf')
+}
+
+@font-face {
+    font-family: 'SF';
+    src: url('./fonts/SF-Pro-Display-Regular.otf') format('OpenType')
+}
+
+@font-face {
+    font-family: 'SF Light';
+    src: url('./fonts/SF-Pro-Display-Light.otf') format('OpenType')
+}
+
+@font-face {
+    font-family: 'SF Semi';
+    src: url('./fonts/SF-Pro-Display-Semibold.otf') format('OpenType')
+}
+
+@font-face {
+    font-family: 'Nimbus';
+    src: url('./fonts/Nimbus Sans/NimbusSansNovusTOT-Reg.otf') format('OpenType')
+}
+@font-face {
+    font-family: 'Nimbus-Light';
+    src: url('./fonts/Nimbus Sans/NimbusSansNovusTOT-Lig.otf') format('OpenType')
+}
+@font-face {
+    font-family: 'Nimbus-Bold';
+    src: url('./fonts/Nimbus Sans/NimbusSansNovusTOT-Bol.otf') format('OpenType')
+}
+@font-face {
+    font-family: 'Nimbus-Black';
+    src: url('./fonts/Nimbus Sans/NimbusSansNovusTOT-Bla.otf') format('OpenType')
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+root {
+    --c-bg: #FFFFFF;
+    --c-fg: #000000;
+    -webkit-font-smoothing: antialiased;
+    --columns: 12;
+    --outer-gap: 7vw;
+    --inner-gap: 1vw;
+    --outer-col: calc(var(--outer-gap) - var(--inner-gap));
+    --header-height: 60px;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden; }
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'SF', Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none; }
+
+::selection {
+    color: #ffc13b;
+}

@@ -1,0 +1,92 @@
+.content{
+    width: 100%;
+    height: auto;
+    padding: 0 10% 0 10%;
+}
+
+#index{
+    position: static;
+    padding-top: 5%;
+}
+.Welcome{
+    font-family: "Canela", sans-serif;
+    font-size: 100px;
+    color: black;
+}
+.Welcome span{
+    font-weight: 700;
+    font-size: 120px;
+}
+
+@media screen and (max-width: 1920px) {
+    #index{
+        position: fixed;
+        bottom: 35%;
+    }
+    .Welcome{
+        font-size: 120px;
+        color: black;
+    }
+    .Welcome span{
+        font-weight: 700;
+        font-size: 200px;
+    }
+}
+@media screen and (max-width: 1440px) {
+    #index{
+        position: fixed;
+        bottom: 40%;
+    }
+    .Welcome{
+        font-size: 100px;
+    }
+    .Welcome span{
+        font-weight: 700;
+        font-size: 150px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #index{
+        position: fixed;
+        bottom: 40%;
+    }
+    .Welcome{
+        font-size: 85px;
+    }
+    .Welcome span{
+        font-weight: 700;
+        font-size: 120px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #index{
+        position: fixed;
+        bottom: 40%;
+    }
+    .Welcome{
+        font-size: 65px;
+        color: black;
+    }
+    .Welcome span{
+        font-weight: 700;
+        font-size: 100px;
+    }
+}
+
+@media (min-width: 280px) and (max-width: 418px) {
+    #index{
+        position: fixed;
+        bottom: 45%;
+    }
+    .Welcome{
+        font-size: 42px;
+        color: black;
+    }
+    .Welcome span{
+        font-weight: 700;
+        font-size: 58px;
+    }
+}
+
+

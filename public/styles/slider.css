@@ -1,0 +1,124 @@
+/* Global */
+.slider {
+    margin: 30px auto;
+    padding-left: 1%;
+    max-width: 960px;
+}
+
+.slide_viewer {
+    height: 580px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide_group {
+    height: auto;
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    display: block;
+    height: auto;
+    background: #d4d4d4;
+    position: relative;
+    text-align: center;
+}
+
+.slide img{
+    padding: 2% 0 2% 0;
+    width: 96%;
+    max-height: 540px;
+    object-fit: scale-down !important;
+}
+
+.small-image{
+    width: 90%;
+    height: auto;
+}
+.slide p{
+    font-family: "Nimbus-Bold", sans-serif;
+    text-align: left;
+    font-size: 20px;
+    padding-left: 3%;
+    padding-bottom: 1%;
+}
+
+.slide i{
+    font-size: 14px;
+}
+/* slider dots*/
+.slide_buttons {
+    background: transparent;
+    left: 0;
+    right: 0;
+    position: relative;
+    text-align: center;
+    top: -30px;
+}
+
+a.slide_btn {
+    color: #474544;
+    font-size: 42px;
+    margin: 0 0.175em;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.slide_btn.active, .slide_btn:hover {
+    color: #428CC6;
+    cursor: pointer;
+}
+
+.directional_nav {
+    height: 50px;
+    margin: 0 auto;
+    max-width: 1080px;
+    position: relative;
+    bottom: 400px;
+}
+
+.previous_btn {
+    bottom: 0;
+    left: -10px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+}
+
+.next_btn {
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    right: -40px;
+    top: 0;
+}
+
+.previous_btn, .next_btn {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    opacity: 0.5;
+    -webkit-transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    -ms-transition: opacity 0.4s ease-in-out;
+    -o-transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.4s ease-in-out;
+
+}
+
+.previous_btn:hover, .next_btn:hover {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 767px) {
+    .previous_btn {
+        left: 15px;
+    }
+    .next_btn {
+        right: 15px;
+    }
+}

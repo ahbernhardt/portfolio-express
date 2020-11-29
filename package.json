@@ -1,0 +1,32 @@
+{
+  "name": "seis751-final-project",
+  "version": "1.0.0",
+  "author": "Anh nguyen",
+  "license": "MIT",
+  "description": "Developer Portfolio Website Project for Web App. & Design Class",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.3",
+    "compression": "^1.7.4",
+    "connect": "^3.7.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1",
+    "express-generators": "^1.1.2",
+    "express-minify": "^1.0.0",
+    "highlight.js": "^10.4.0",
+    "jquery": "^3.5.1",
+    "moment": "^2.29.1",
+    "mongodb": "^3.6.3",
+    "node-mailer": "^0.1.1",
+    "popper.js": "^1.16.1",
+    "pretty-print-json": "^0.3.0"
+  }
+}

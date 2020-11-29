@@ -1,0 +1,23 @@
+#wireframe{
+    width: 100%;
+}
+.section-title{
+    font-family: "Canela", sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+/*=======================================
+                  MEDIA
+=========================================*/
+@media (max-width: 418px){
+    .image-holder p{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px){
+    .image-holder p{
+        font-size: 16px;
+    }
+}

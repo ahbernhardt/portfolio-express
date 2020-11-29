@@ -1,0 +1,444 @@
+/*========================*/
+/*          MENU          */
+/*========================*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 25px;
+}
+
+/* LOGO */
+#mainlogo{
+    margin: 0;
+}
+.logo {
+    font-family: "Nimbus-Bold", sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 3px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.logo span{
+    font-family: "Nimbus-Light", sans-serif;
+}
+
+.logo:hover{
+    color: gray !important;
+    text-decoration: none;
+}
+
+/* Menu Button*/
+.burger {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    display: none;
+    font-size: 16px;
+    font-family: "Nimbus-Bold", sans-serif;
+    line-height: 14px;
+    letter-spacing: 3px;
+    color: black;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0;
+    outline: none;
+    height: 30px;
+    width: 85px;
+}
+
+.burger:hover {
+    color: gray;
+}
+.burger:active {
+    color: #ffc13b;
+    outline: none;
+}
+
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+ul li {
+    margin: 0 10px;
+}
+
+ul li a {
+    font-family: "Nimbus-Bold", sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 3px;
+    color: black;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    height: 2px;
+    width: 50%;
+}
+
+ul li a:hover {
+    color: darkgray;
+    text-decoration: none;
+}
+
+/*========================*/
+/*         FOOTER         */
+/*========================*/
+    .footer{
+        position: absolute;
+        display: inline-flex;
+        width: 100%;
+        padding: 0 6% 0 6%;
+        list-style-type: none;
+        align-items: flex-end;
+        bottom: 0;
+        height: 50px;
+        border-top: solid 1px #e9e9e9;
+    }
+
+    .copyright{
+        font-family: Nimbus, sans-serif;
+        font-weight: 700;
+        color: darkgray;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .navbar-nav-footer{
+        position: relative;
+        list-style-type: none;
+        display: inline-flex;
+        margin-right: 0;
+        margin-left: auto;
+    }
+    .navbar-nav-footer li a {
+        font-family: Nimbus, sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        color: darkgray;
+        text-transform: uppercase;
+        padding-left: 20px;
+        text-decoration: none;
+    }
+    .navbar-nav-footer  li a:hover {
+        color: black !important;
+        background: transparent;
+    }
+
+
+/*    FOOTER 2   */
+.footer-2{
+    border-top: solid 1px #e9e9e9;
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    padding: 15px 6% 0 6%;
+    list-style-type: none;
+    bottom: 20px;
+    align-items: baseline;
+}
+
+.footer-col{
+    display: inline-block;
+    position: relative;
+    list-style-type: none;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.footer-col li a {
+    font-family: Nimbus, sans-serif;
+    font-weight: 700;
+    font-size: 9px;
+    color: darkgray;
+    text-transform: uppercase;
+    padding-left: 15px;
+    text-decoration: none;
+}
+.footer-col  li a:hover {
+    color: black !important;
+    background: transparent;
+}
+
+.footer-col li a span{
+    font-size: 14px;
+}
+
+/*=======================================================
+             MOBILE
+=========================================================*/
+@media screen and (max-width: 418px){
+    .logo {
+        font-size: 5px;
+        letter-spacing: 2px;
+    }
+
+    .burger {
+        display: block;
+        padding-top: -25px;
+        padding-right: 20px;
+        z-index: 5;
+    }
+
+    ul.menu {
+        position: fixed;
+        margin-right: 23px;
+        margin-top: 5px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    ul.menu.show {
+        transform: translateX(0);
+    }
+
+    ul.menu li {
+        margin: 0 25px;
+    }
+
+
+    /* FOOTER */
+    .footer{
+        height: auto;
+        align-items: baseline;
+        right:0;
+        bottom: 3%;
+    }
+    .copyright{
+        font-size: 8px;
+    }
+    .navbar-nav-footer{
+        width: auto;
+        display: inline-block;
+        text-align: right;
+        margin-right: 0;
+    }
+    .navbar-nav-footer li a {
+        font-size: 9px;
+        right:0;
+    }
+}
+
+/*===============================
+             TABLET
+=================================*/
+@media screen and (max-width: 768px) {
+    #mainlogo{
+        margin-top: 0;
+        margin-left: 0;
+        padding-top: 2%;
+        padding-left: 5%;
+    }
+    .logo {
+        font-size: 12px;
+    }
+    .burger {
+        display: block;
+        margin-top: 20px;
+        padding-right: 20px;
+        z-index: 5;
+    }
+
+    ul.menu {
+        flex-direction: column;
+        text-align: right;
+        position: fixed;
+        right: 0;
+        padding-right: 35px;
+        padding-top: 130px;
+        transform: translateX(120%);
+        width: 25%;
+        transition: transform 0.3s ease-in;
+    }
+
+    ul.menu.show {
+        transform: translateX(0);
+    }
+
+    ul.menu li {
+        margin: 0 15px;
+    }
+
+    /* FOOTER */
+    .footer{
+        border-top: solid 1px #e9e9e9;
+        height: auto;
+        align-items: baseline;
+        right:0;
+        bottom: 20px;
+    }
+    .copyright{
+        font-size: 10px;
+    }
+    .navbar-nav-footer{
+        width: auto;
+        display: inline-block;
+        text-align: right;
+    }
+    .navbar-nav-footer li a {
+        font-size: 10px;
+        right:0;
+    }
+}
+/*===============================
+             1024px
+=================================*/
+@media (max-width: 1024px) {
+    #mainlogo{
+        margin-top: 1%;
+        margin-left: 2%;
+    }
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu{
+        margin-right: 5%;
+        margin-top: 3%;
+    }
+
+    /* FOOTER */
+    .footer{
+        border-top: solid 1px #e9e9e9;
+        height: auto;
+        align-items: baseline;
+        right:0;
+    }
+    .copyright{
+        font-size: 12px;
+    }
+    .navbar-nav-footer{
+        width: auto;
+        margin-right: -3%;
+    }
+    .navbar-nav-footer li a {
+        font-size: 12px;
+        right:0;
+    }
+}
+
+/*===============================
+             MAC 13
+=================================*/
+@media (max-width: 1280px) {
+    #mainlogo{
+        padding-top: 2%;
+        padding-left: 5%;
+    }
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu{
+        margin-right: 5%;
+        margin-top: 3%;
+    }
+
+    /* FOOTER */
+    .footer{
+        border-top: solid 1px #e9e9e9;
+        height: auto;
+        align-items: baseline;
+        right:0;
+    }
+    .copyright{
+        font-size: 12px;
+    }
+    .navbar-nav-footer{
+        width: auto;
+        margin-right: -3%;
+    }
+    .navbar-nav-footer li a {
+        font-size: 12px;
+        right:0;
+    }
+}
+
+/*===============================
+             MAC 15
+=================================*/
+@media (min-width: 1281px) and (max-width: 1440px) {
+    #mainlogo{
+        padding-top: 2%;
+        padding-left: 5%;
+    }
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu{
+        margin-right: 5%;
+        margin-top: 3%;
+    }
+
+    /* FOOTER */
+    .footer{
+        border-top: solid 1px #e9e9e9;
+        height: auto;
+        align-items: baseline;
+        right: 0;
+        bottom: 15px;
+    }
+    .copyright{
+        font-size: 12px;
+    }
+    .navbar-nav-footer{
+        width: auto;
+        margin-right: -3%;
+    }
+    .navbar-nav-footer li a {
+        font-size: 12px;
+        right:0;
+    }
+}
+
+/*==============================================
+            MAC 15 -> 24" monitor
+================================================*/
+@media (max-width: 1920px) {
+    #mainlogo{
+        padding-top: 2%;
+        padding-left: 5%;
+    }
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu{
+        margin-right: 5%;
+        margin-top: 3%;
+    }
+
+    .menu a{
+        margin-left: 15px;
+        font-size: 16px;
+    }
+
+    /* FOOTER */
+    .footer{
+        border-top: solid 1px #e9e9e9;
+        height: auto;
+        align-items: baseline;
+        right: 0;
+        bottom: 15px;
+    }
+
+    .navbar-nav-footer{
+        margin-right: 0;
+    }
+}
