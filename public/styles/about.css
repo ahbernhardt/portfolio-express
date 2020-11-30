@@ -1,23 +1,127 @@
-#wireframe{
+section{
     width: 100%;
+
+}
+#wireframe{
+    height: 700px;
 }
 .section-title{
     font-family: "Canela", sans-serif;
     font-weight: 700;
     font-size: 35px;
 }
+.Categories{
+    width: 100%;
+    opacity: 1;
+    margin: -8% 2% 3% 2%;
+    display: inline-flex;
+    background: #FFFFFF;
+    list-style-type: none;
+}
+
+#walk-through{
+   width: 75%;
+}
+
+.Category{
+    padding-right: 6%;
+    list-style-type: none;
+}
+
+.SubCategories {
+    margin-top: 5%;
+    list-style-type: none;
+}
+
+.SubCategory {
+    position: relative;
+    padding-left: 17px;
+    margin-bottom: 55px;
+}
+
+.SubCategory:before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 1px;
+     height: 100%;
+     background: gray;
+ }
+
+
+.SubCategoryTitle{
+    font-family: Nimbus-Black, sans-serif;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+
+.SubCategorySubtitle {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 5%;
+}
+
+/*.SubCategoryDescription {*/
+/*    font-family: Nimbus-Bold, sans-serif;*/
+/*    font-size: 20px;*/
+/*    line-height: 24px;*/
+/*    color: #4e4e4e;*/
+/*    margin-top: 5%;*/
+/*}*/
+
+
+.List {
+    /*margin-top: 5%;*/
+    list-style-type: none;
+}
+
+.Item {
+    list-style-type: none;
+    font-family: "Nimbus", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: black;
+}
+
+.Item span{
+    font-family: "Nimbus-Bold", sans-serif;
+    font-weight: 500;
+}
 
 /*=======================================
                   MEDIA
 =========================================*/
-@media (max-width: 418px){
-    .image-holder p{
-        font-size: 14px;
+@media screen and (max-width: 418px){
+    .Categories{
+        display: inline-block;
+        width: 100%;
     }
+    #walk-through{
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 768px){
-    .image-holder p{
-        font-size: 16px;
-    }
+    /*#walk-through{*/
+    /*    margin-top: -5%;*/
+    /*    margin-bottom: 15%;*/
+    /*}*/
+}
+
+@media (max-width: 1440px){
+    /*#walk-through{*/
+    /*    margin-top: -1%;*/
+    /*    margin-bottom: 5%;*/
+    /*}*/
+}
+
+@media (max-width: 1920px){
+    /*#walk-through{*/
+    /*    margin-top: -1%;*/
+    /*    margin-bottom: 15%;*/
+    /*}*/
 }

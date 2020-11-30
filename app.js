@@ -69,9 +69,9 @@ app.get('/about', (req, res) => {
 // });
 
 // Projects
-app.get('/projects', (req, res) => {
-    res.render('projects', {
-        page:'Projects', menuId:'projects',
+app.get('/featured', (req, res) => {
+    res.render('featured', {
+        page:'Featured', menuId:'featured',
     });
 });
 // const getProjectLinks = () => {

@@ -27,6 +27,7 @@
     "mongodb": "^3.6.3",
     "node-mailer": "^0.1.1",
     "popper.js": "^1.16.1",
-    "pretty-print-json": "^0.3.0"
+    "pretty-print-json": "^0.3.0",
+    "gsap": "^3.5.1"
   }
 }

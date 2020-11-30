@@ -1,6 +1,6 @@
 /* Global */
 .slider {
-    margin: 30px auto;
+    margin: 20px auto;
     padding-left: 1%;
     max-width: 960px;
 }
@@ -12,7 +12,7 @@
 }
 
 .slide_group {
-    height: auto;
+    height: 525px;
     position: relative;
     width: 100%;
 }
@@ -36,22 +36,19 @@
     width: 90%;
     height: auto;
 }
+
 .slide p{
     font-family: "Nimbus-Bold", sans-serif;
-    text-align: left;
+    text-align: center;
     font-size: 20px;
-    padding-left: 3%;
-    padding-bottom: 1%;
 }
 
-.slide i{
-    font-size: 14px;
-}
 /* slider dots*/
 .slide_buttons {
     background: transparent;
     left: 0;
     right: 0;
+    bottom: 15px;
     position: relative;
     text-align: center;
     top: -30px;
@@ -114,11 +111,101 @@ a.slide_btn {
     opacity: 1;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1280px) {
+    .slider {
+        max-width: 920px;
+    }
+
+    .slide_viewer {
+        height: 530px;
+    }
+
+    .slide img{
+        margin-top: -2%;
+        padding: 2%;
+        max-height: 500px;
+        object-fit: scale-down !important;
+    }
+    .small-image{
+        width: 96%;
+        height: auto;
+    }
+    .slide p{
+        font-size: 18px;
+        text-align: center;
+        padding-top: 1%;
+    }
+    .directional_nav {
+        bottom: 350px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .slide_viewer {
+        height: 530px;
+    }
+
+    .slide img{
+        margin-top: -2%;
+        padding: 2%;
+        max-height: 500px;
+        object-fit: scale-down !important;
+    }
+    .small-image{
+        height: 500px;
+    }
+    .slide p{
+        font-size: 18px;
+        text-align: center;
+        padding-top: 1%;
+    }
+    .directional_nav {
+        bottom: 350px;
+    }
+
     .previous_btn {
-        left: 15px;
+        left: -40px;
     }
     .next_btn {
-        right: 15px;
+        right: -58px;
+    }
+}
+
+@media only screen and (max-width: 418px) {
+    .slider{
+        width: 120%;
+        margin-left: -10%;
+    }
+    .slide_viewer {
+        height: auto;
+    }
+
+    .slide img{
+        margin-top: -2%;
+        padding: 2%;
+        max-height: 490px;
+        object-fit: scale-down !important;
+    }
+    .small-image{
+        height: 500px;
+    }
+    .slide p{
+        font-size: 18px;
+        text-align: center;
+        padding-top: 2%;
+    }
+    .directional_nav {
+        bottom: 350px;
+    }
+
+    .previous_btn, .next_btn {
+        height: 20px;
+        width: 20px;
+    }
+    .previous_btn {
+        left: -30px;
+    }
+    .next_btn {
+        right: -20px;
     }
 }

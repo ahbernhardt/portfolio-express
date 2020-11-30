@@ -33,21 +33,20 @@ nav {
 
 /* Menu Button*/
 .burger {
-    background: transparent;
+    background:transparent;
     border: 0;
     cursor: pointer;
     display: none;
     font-size: 16px;
     font-family: "Nimbus-Bold", sans-serif;
-    line-height: 14px;
+    line-height: 16px;
     letter-spacing: 3px;
     color: black;
     text-transform: uppercase;
     position: relative;
-    padding: 0;
     outline: none;
     height: 30px;
-    width: 85px;
+    width: 60px;
 }
 
 .burger:hover {
@@ -58,7 +57,7 @@ nav {
     outline: none;
 }
 
-ul {
+ul.menu {
     display: flex;
     margin: 0;
     padding: 0;
@@ -66,11 +65,11 @@ ul {
     list-style-type: none;
 }
 
-ul li {
+ul.menu li {
     margin: 0 10px;
 }
 
-ul li a {
+ul.menu li a {
     font-family: "Nimbus-Bold", sans-serif;
     font-size: 14px;
     line-height: 14px;
@@ -81,7 +80,7 @@ ul li a {
     text-decoration: none;
 }
 
-ul li a::after {
+ul.menu li a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -90,7 +89,7 @@ ul li a::after {
     width: 50%;
 }
 
-ul li a:hover {
+ul.menu li a:hover {
     color: darkgray;
     text-decoration: none;
 }
@@ -144,30 +143,44 @@ ul li a:hover {
 /*    FOOTER 2   */
 .footer-2{
     border-top: solid 1px #e9e9e9;
-    position: relative;
     display: inline-flex;
     width: 100%;
     padding: 15px 6% 0 6%;
     list-style-type: none;
-    bottom: 20px;
-    align-items: baseline;
+    position: relative;
+    justify-content: space-between;
+}
+
+.copyright-2{
+    font-family: Nimbus, sans-serif;
+    font-weight: 700;
+    color: darkgray;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.nav-footer{
+    position: relative;
+    list-style-type: none;
+    display: inline-flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .footer-col{
-    display: inline-block;
+    display: block;
     position: relative;
     list-style-type: none;
-    margin-right: 0;
-    margin-left: auto;
 }
 
 .footer-col li a {
     font-family: Nimbus, sans-serif;
     font-weight: 700;
-    font-size: 9px;
+    font-size: 10px;
     color: darkgray;
     text-transform: uppercase;
-    padding-left: 15px;
+    padding-left: 20px;
     text-decoration: none;
 }
 .footer-col  li a:hover {
@@ -179,27 +192,30 @@ ul li a:hover {
     font-size: 14px;
 }
 
+
 /*=======================================================
              MOBILE
 =========================================================*/
-@media screen and (max-width: 418px){
+@media only screen and (max-width: 418px) {
     .logo {
         font-size: 5px;
         letter-spacing: 2px;
     }
 
     .burger {
-        display: block;
-        padding-top: -25px;
-        padding-right: 20px;
+        margin-bottom: 5px;
+        margin-right: 5px;
         z-index: 5;
     }
 
     ul.menu {
-        position: fixed;
-        margin-right: 23px;
-        margin-top: 5px;
-        transform: translateX(100%);
+        display: block;
+        text-align: right;
+        position: relative;
+        padding-right: 15px;
+        padding-top: 120px;
+        transform: translateX(120%);
+        width: 75%;
         transition: transform 0.3s ease-in;
     }
 
@@ -208,29 +224,71 @@ ul li a:hover {
     }
 
     ul.menu li {
-        margin: 0 25px;
+        margin: 0;
+        text-align: right;
     }
 
 
     /* FOOTER */
-    .footer{
+    .footer {
         height: auto;
         align-items: baseline;
-        right:0;
+        right: 0;
         bottom: 3%;
     }
-    .copyright{
+
+    .copyright {
         font-size: 8px;
     }
-    .navbar-nav-footer{
+
+    .navbar-nav-footer {
         width: auto;
         display: inline-block;
         text-align: right;
         margin-right: 0;
     }
+
     .navbar-nav-footer li a {
         font-size: 9px;
-        right:0;
+        right: 0;
+    }
+
+    /*     MOBILE FOOTER 2*/
+    .footer-2 {
+        border-top: solid 1px #e9e9e9;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        list-style-type: none;
+        bottom: 20px;
+    }
+
+
+    .copyright-2 {
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding-left: 2%;
+    }
+
+    .nav-footer {
+        margin-top: -10px;
+        display: block;
+        text-align: left;
+    }
+
+    .footer-col {
+        display: block;
+        list-style-type: none;
+        margin-bottom: 3px;
+    }
+
+    .footer-col li a {
+        font-size: 9px;
+    }
+
+    .footer-col li a span {
+        font-size: 14px;
+        margin-left: -15px;
     }
 }
 
@@ -259,10 +317,9 @@ ul li a:hover {
         text-align: right;
         position: fixed;
         right: 0;
-        padding-right: 35px;
+        margin-right: 12px;
         padding-top: 130px;
         transform: translateX(120%);
-        width: 25%;
         transition: transform 0.3s ease-in;
     }
 
@@ -294,7 +351,12 @@ ul li a:hover {
         font-size: 10px;
         right:0;
     }
+
+
+
+
 }
+
 /*===============================
              1024px
 =================================*/
@@ -330,43 +392,51 @@ ul li a:hover {
         font-size: 12px;
         right:0;
     }
+
 }
 
 /*===============================
              MAC 13
 =================================*/
 @media (max-width: 1280px) {
-    #mainlogo{
+    #mainlogo {
         padding-top: 2%;
         padding-left: 5%;
     }
+
     .logo {
         font-size: 20px;
     }
 
-    .menu{
+    .menu {
         margin-right: 5%;
         margin-top: 3%;
     }
 
     /* FOOTER */
-    .footer{
+    .footer {
         border-top: solid 1px #e9e9e9;
         height: auto;
         align-items: baseline;
-        right:0;
+        right: 0;
     }
-    .copyright{
+
+    .copyright {
         font-size: 12px;
     }
-    .navbar-nav-footer{
+
+    .navbar-nav-footer {
         width: auto;
         margin-right: -3%;
     }
+
     .navbar-nav-footer li a {
         font-size: 12px;
-        right:0;
+        right: 0;
     }
+
+    /* FOOTER-2 */
+
 }
 
 /*===============================
@@ -405,6 +475,8 @@ ul li a:hover {
         font-size: 12px;
         right:0;
     }
+
+
 }
 
 /*==============================================
@@ -441,4 +513,8 @@ ul li a:hover {
     .navbar-nav-footer{
         margin-right: 0;
     }
+
+
+
+
 }
