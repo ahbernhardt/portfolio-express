@@ -24,7 +24,7 @@ dotenv.config();
 const app = express();
 
 // app config
-// app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // app middleware
@@ -32,7 +32,6 @@ app.use(compression());
 app.use(minify());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-// app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('public'));
 
 /*=======================
@@ -41,7 +40,6 @@ app.use(express.static('public'));
 
 // Index
 app.get('/', (req, res) => {
-    // getProjectLinks();
     res.render('index', {
         page:'Portfolio Website', menuId:'home',
     });
@@ -53,20 +51,7 @@ app.get('/about', (req, res) => {
         page:'About', menuId:'about',
     });
 });
-// app.get('/about', (req, res) => {
-// get first project as example code
-//     let jsonStr = JSON.stringify(projects[0], null, 2);
-//     jsonStr = jsonStr.replace(/[{}]/g, '');
-//     const exampleProject = hljs.highlightAuto(jsonStr).value;
-//     const [exampleSkill] = skills;
-//
-//     res.render('about', {
-//         exampleProject: exampleProject,
-//         exampleSkill: exampleSkill,
-//         dependencies: depArray,
-//         moment: moment
-//     });
-// });
+
 
 // Projects
 app.get('/featured', (req, res) => {

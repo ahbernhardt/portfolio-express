@@ -1,6 +1,5 @@
 section{
     width: 100%;
-
 }
 #wireframe{
     height: 700px;
@@ -95,6 +94,10 @@ section{
                   MEDIA
 =========================================*/
 @media screen and (max-width: 418px){
+    #about-intro .section-title{
+        font-size: 40px;
+        text-align: center;
+    }
     .Categories{
         display: inline-block;
         width: 100%;
@@ -105,23 +108,70 @@ section{
 
 }
 
-@media (max-width: 768px){
-    /*#walk-through{*/
-    /*    margin-top: -5%;*/
-    /*    margin-bottom: 15%;*/
-    /*}*/
+@media (min-width: 768px){
+    #about-intro .section-title{
+        font-size: 45px;
+        text-align: center;
+    }
 }
 
-@media (max-width: 1440px){
-    /*#walk-through{*/
-    /*    margin-top: -1%;*/
-    /*    margin-bottom: 5%;*/
-    /*}*/
+@media screen and (min-width: 1280px) and (max-width: 1336px){
+    #about-intro{
+        padding: 0 6% 0 6%;
+    }
+    #about-intro .section-title{
+        font-size: 50px;
+        text-align: center;
+    }
+    #content-map{
+        padding: 0 6% 0 6%;
+    }
+    #wireframe .section-title{
+        padding: 0 6% 0 6%;
+    }
+
+    #walk-through {
+        padding: 0 0 0 3%;
+    }
+
 }
 
-@media (max-width: 1920px){
-    /*#walk-through{*/
-    /*    margin-top: -1%;*/
-    /*    margin-bottom: 15%;*/
-    /*}*/
+@media (min-width: 1440px){
+    #about-intro{
+        padding: 0 10% 0 10%;
+    }
+    #about-intro .section-title{
+        font-size: 50px;
+        text-align: center;
+    }
+    #content-map{
+        padding: 0 10% 0 10%;
+    }
+    #wireframe .section-title{
+        padding: 0 10% 0 10%;
+    }
+
+    #walk-through {
+        padding: 0 0 0 6%;
+    }
+}
+
+@media (min-width: 1920px){
+    #about-intro{
+        padding: 0 20% 0 20%;
+    }
+    #about-intro .section-title{
+        font-size: 55px;
+        text-align: center;
+    }
+    #content-map{
+        padding: 0 20% 0 20%;
+    }
+    #wireframe .section-title{
+        padding: 0 20% 0 20%;
+    }
+
+    #walk-through {
+        padding: 0 0 0 17%;
+    }
 }

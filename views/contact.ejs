@@ -3,10 +3,43 @@
 <%- include('partials/head') %>
 
 <body >
-<%- include('partials/menu') %>
+<%- include('partials/header') %>
 
-<section class="content">
-    <div class="contact-wrapper">
+<main class="content" >
+    <section class="contact-wrapper" id="contact">
+        <div class="direct-contact-container">
+            <h1 class="section-header">Get In Touch</h1>
+            <ul class="contact-list">
+                <li class="list-item"><span class="contact-text">Minneapolis | MN</span></li>
+                <li class="list-item"><span class="contact-text"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></li>
+                <li class="list-item"><span class="contact-text"><a href="mailto:#" title="Send me an email">a.nguyen0208@gmail.com</a></span></li>
+            </ul>
+
+            <ul class="social-media-list">
+                <li>
+                    <a href="#" target="_blank" class="contact-icon">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" class="contact-icon">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li><a href="#" target="_blank" class="contact-icon">
+                        <i class="fab fa-twitter" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" target="_blank" class="contact-icon">
+                        <i class="fab fa-instagram" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" target="_blank" class="contact-icon">
+                        <i class="fab fa-codepen" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+
+        </div>
+
+        <!--    FORM    -->
         <form class="form-horizontal" role="form" method="post" >
 
             <div class="form-group">
@@ -29,58 +62,11 @@
                 </div>
 
             </button>
-
         </form>
-
-        <!----------------
-
-        CONTACT PAGE RIGHT
-
-        ----------------->
-
-        <div class="direct-contact-container">
-            <h1 class="section-header">Get In Touch</h1>
-            <ul class="contact-list">
-                <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Minneapolis | MN</span></i></li>
-
-                <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
-
-                <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">a.nguyen0208@gmail.com</a></span></i></li>
-
-            </ul>
-
-            <hr>
-            <ul class="social-media-list">
-                <li>
-                    <a href="#" target="_blank" class="contact-icon">
-                        <i class="fab fa-linkedin" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank" class="contact-icon">
-                        <i class="fab fa-github" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li><a href="#" target="_blank" class="contact-icon">
-                        <i class="fab fa-twitter" aria-hidden="true"></i></a>
-                </li>
-                <li><a href="#" target="_blank" class="contact-icon">
-                        <i class="fab fa-instagram" aria-hidden="true"></i></a>
-                </li>
-                <li><a href="#" target="_blank" class="contact-icon">
-                        <i class="fab fa-codepen" aria-hidden="true"></i></a>
-                </li>
-            </ul>
-            <hr>
-
-        </div>
-
-    </div>
-
-</section>
+    </section>
+</main>
 
 <%- include('partials/footer-2') %>
-
 </body>
 <%- include('partials/scripts') %>
 </html>

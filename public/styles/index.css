@@ -4,14 +4,12 @@
     padding: 0 10% 3% 10%;
 }
 
-#index{
-    position: static;
-    padding-top: 5%;
-}
 .Welcome{
     font-family: "Canela", sans-serif;
     font-size: 100px;
     color: black;
+    position: static;
+    padding-top: 5%;
 }
 .Welcome span{
     font-weight: 700;
@@ -19,11 +17,9 @@
 }
 
 @media screen and (max-width: 1920px) {
-    #index{
-        position: fixed;
-        bottom: 35%;
-    }
+
     .Welcome{
+        padding-top: 5%;
         font-size: 120px;
         color: black;
     }
@@ -33,24 +29,17 @@
     }
 }
 @media screen and (max-width: 1440px) {
-    #index{
-        position: fixed;
-        bottom: 40%;
-    }
     .Welcome{
+        padding-top: 10%;
         font-size: 100px;
     }
     .Welcome span{
         font-weight: 700;
-        font-size: 150px;
+        font-size: 120px;
     }
 }
 
 @media screen and (max-width: 1280px) {
-    #index{
-        position: fixed;
-        bottom: 40%;
-    }
     .Welcome{
         font-size: 85px;
     }
@@ -60,9 +49,10 @@
     }
 }
 @media screen and (max-width: 768px) {
-    #index{
-        position: fixed;
-        bottom: 40%;
+    .content{
+        width: 100%;
+        height: auto;
+        padding: 0 10% 10% 10%;
     }
     .Welcome{
         font-size: 65px;
@@ -75,11 +65,13 @@
 }
 
 @media (min-width: 280px) and (max-width: 418px) {
-    #index{
-        position: fixed;
-        bottom: 45%;
+    .content{
+        width: 100%;
+        height: auto;
+        padding: 0 10% 3% 10%;
     }
     .Welcome{
+        padding-top: 40%;
         font-size: 42px;
         color: black;
     }
