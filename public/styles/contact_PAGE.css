@@ -151,7 +151,9 @@
 }
 
 
-/* Begin Media Queries*/
+/*=======================================================
+             MOBILE
+=========================================================*/
 @media only screen and (min-width: 280px) and (max-width: 418px) {
     #contact {
         margin-bottom: 5%;
@@ -184,42 +186,61 @@
     }
 }
 
-
+/*====================================
+            Tablet
+=======================================*/
 @media only screen and (min-width: 768px) and (max-width: 799px) {
     #contact {
-        margin-bottom: 3%;
+        padding-top: 15%;
+        margin-bottom: 1%;
     }
     .section-header {
         font-size: 35px;
     }
 
-    .form-horizontal{
-        float: right;
-        margin-top: 50px;
-    }
+
     .direct-contact-container {
         width: 40%;
         float: left;
         text-align: left;
         display: inline-block;
         padding: 1% 0;
-        margin-left: 10%;
+        margin-left: 0;
     }
     .social-media-list {
-        width: 58%;
-        margin-left: 4%;
+        width: 100%;
+        /*margin-left: 4%;*/
     }
-    .social-media-list li:after {
-        width: 35px;
+
+    .social-media-list{
+        font-size: 20px;
+        padding-left: 15%;
+    }
+
+    .social-media-list li {
         height: 35px;
+        width: 35px;
         line-height: 35px;
+    }
+
+    .form-horizontal{
+        float: right;
+        margin-top: 75px;
     }
 
     .form-control, textarea{
         width: 300px;
     }
+
+    .contact-wrapper iframe{
+        margin-left: 0;
+        width: 280px;
+    }
 }
 
+/*====================================
+            MAC BOOK Size
+=======================================*/
 @media only screen and (min-width: 1280px) and (max-width: 1440px) {
     #contact {
         margin-bottom: 3%;
@@ -242,17 +263,26 @@
         margin-left: 4%;
     }
 
-    .form-control, textarea{
-        width: 400px;
-    }
-
     .form-horizontal{
+        padding-top: 8%;
         float: right;
         width: 50%;
         font-weight: 400;
     }
-}
 
+    .form-control, textarea{
+        width: 400px;
+    }
+
+
+
+    .contact-wrapper iframe{
+        margin-left: 10%;
+    }
+}
+/*======================================
+            MONITOR
+=======================================*/
 @media only screen and (min-width: 1920px) {
     #contact {
         margin-bottom: 3%;
@@ -286,6 +316,8 @@
         width: 400px;
     }
 
-
+    .contact-wrapper iframe{
+        margin-left: 25%;
+    }
 
 }

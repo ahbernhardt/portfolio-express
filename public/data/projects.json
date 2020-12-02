@@ -1,43 +1,88 @@
-[{
-  "name": "Redacter",
-  "imagePath": "../assets/img/redacter.png",
-  "caption": "Changes real names to fake ones using Python and React",
-  "url": "https://redacter.herokuapp.com/",
-  "repo": "https://github.com/burstMembrane/redacter",
-  "languages": [
-    "React",
-    "Semantic-UI",
-    "Flask",
-    "Python"
-  ],
-  "show": "true"
-},
-  {
-    "name": "LN-001 Microphone",
-    "imagePath": "../assets/img/ln001-preview.png",
-    "caption": "A promo website for the LN-001 Microphone",
-    "url": "https://ln001.netlify.com/",
-    "repo": "",
-    "languages": [
-      "React",
-      "Semantic-UI",
-      "Node",
-      "CSS"
+{
+    "latest": [
+      {
+        "title": "Github.io",
+        "description": "Portfolio website build with Jekyll, Gulp, React, and deploy with GH-Pages ",
+        "link": "https://anguyen0208.github.io/",
+        "repo": "https://github.com/anguyen0208/anguyen0208.github.io",
+        "languages": [
+          "React",
+          "Gulp",
+          "Jekyll",
+          "GH-Pages"
+        ],
+        "imagePath": "./images/projects/anguyen_io.png"
+      },
+      {
+        "title": "Poncho.club",
+        "description": "A website to connect players in Final Fantasy XIV who enjoys EDM and Trance music",
+        "link": "https://poncho.club/",
+        "repo": "https://github.com/anguyen0208/poncho-club",
+        "languages": [
+          "Gatsby",
+          "React",
+          "Netlify",
+          "GraphQL"
+        ],
+        "imagePath": "/images/projects/poncho.png"
+      },
+      {
+        "title": "Pomodoro",
+        "description": "Web application Timer build with React",
+        "link": "https://anguyen0208.github.io/pomodoro-clock/",
+        "repo": "https://github.com/anguyen0208/pomodoro-clock",
+        "languages": [
+          "React",
+          "HTML",
+          "CSS"
+        ],
+        "imagePath": "/images/projects/Pomodoro.png"
+      },
+      {
+        "title": "Drum Machine",
+        "description": "Simple drum machine web application build with React",
+        "link": "https://anguyen0208.github.io/drum-machine/",
+        "repo": "https://github.com/anguyen0208/drum-machine",
+        "languages": [
+          "React",
+          "HTML",
+          "CSS"
+        ],
+        "imagePath": "/images/projects/Drum-Machine.png"
+      }
     ],
-    "show": "true"
-  },
-  {
-    "name": "Colour Timer",
-    "imagePath": "../assets/img/preview.png",
-    "caption": "A moody coloured timer written in vanilla JavaScript",
-    "url": "https://liamfpower.com/colourtimer/",
-    "repo": "https://github.com/burstMembrane/colourtimer",
-    "languages": [
-      "JavaScript",
-      "jQuery UI",
-      "HTML",
-      "CSS"
-    ],
-    "show": "true"
-  }
-]
+    "others": [
+      {
+        "title": "Online Resume",
+        "description": "Online version of my Resume",
+        "languages": [
+          "React",
+          "Sass",
+          "GH-pages",
+          "Python"
+        ],
+        "link": "https://anguyen0208.github.io/online-resume/",
+        "repo": "https://github.com/anguyen0208/online-resume"
+      },
+      {
+        "title": "Financial Calculator",
+        "description": "Desktop application project for Java class",
+        "languages": [
+          "Java",
+          "JavaFX"
+        ],
+        "link": "https://github.com/anguyen0208/Tottemham",
+        "repo": "https://github.com/anguyen0208/Financial-Calculator-V2"
+      },
+      {
+        "title": "Tottemham",
+        "description": "Simple page layout project for Web App & Design class",
+        "languages": [
+          "HTML",
+          "CSS"
+        ],
+        "link": "https://github.com/anguyen0208/Tottemham",
+        "repo": "https://github.com/anguyen0208/Tottemham"
+      }
+    ]
+}

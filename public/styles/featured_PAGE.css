@@ -1,59 +1,76 @@
 .Hero {
     width: 100%;
-    height: calc((var(--vh, 1vh) * 100) - var(--header-height));
-    display: flex;
+    height: auto;
+    padding-top: 2%;
     justify-content: center;
     align-items: center
 }
 
-.Container{
-    width: 100%;
-    display: grid;
-    grid-template-columns: var(--outer-col) repeat(var(--columns), minmax(0, 1fr)) var(
-      --outer-col
-    );
-    grid-column-gap: var(--inner-gap);
-    margin: 0;
-}
-.Grid {
-    height: 100%;
-}
-
+/* slider */
 .ProjectCarousel {
     width: 100%;
-    height: 65%;
+    height: 450px;
     overflow: hidden;
     position: relative;
-    grid-row: 1;
-    grid-column: 2 / -2;
 }
 
+/* slider viewer */
 .List {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: absolute;
+}
+
+/*slider group*/
+.Projects{
+    width: 100%;
+    max-height: 450px;
+    justify-self: center;
+}
+
+/* each slide */
+.Project {
+    border: solid 1px #dedede;
+    height: 450px;
+    width: 90%;
+    display: inline-block;
+    justify-content: space-between;
+    opacity: 1;
+    margin-left: 5%;
+    margin-right: 10%;
+}
+
+.Project-Info{
+    width: 45%;
     height: 100%;
     position: relative;
+    float:left;
+    margin-left: 5%;
+    padding: 12% 0 0 0;
 }
-
-.Project {
-    flex: 0 0 auto;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-}
-
 .Title {
     font-family: "Canela", sans-serif;
-    font-size: 100px;
-    line-height: 18px;
+    font-size: 66px;
+    line-height: 65px;
+    position: relative;
     color: black;
+}
+.project-description{
+    font-family: "Nimbus", sans-serif;
+    width: 80%;
+    font-size: 20px;
+}
+.Project-image{
+    width: 45%;
+    height: 100%;
+    float: right;
+
+}
+.Project-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover !important;
 }
 
 .Controls{
@@ -65,7 +82,7 @@
     justify-content: space-between;
     pointer-events: none;
     padding: 0 5px;
-    opacity: 0;
+    opacity: 1;
 }
 
 .Control{
@@ -87,4 +104,124 @@
      border-left: none;
      border-right: 3px solid black;
      transform: rotate(-45deg);
+}
+
+.Other-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Other-Project{
+    width: 30%;
+    border: solid 1px #000;
+    padding: 1% 3% 1% 3%;
+    box-shadow: 10px 10px black;
+}
+
+.Other-Project:hover{
+    transform: scale(1.1);
+}
+
+.Other-Project .Title{
+    font-size: 32px;
+    line-height: 32px;
+}
+
+.Other-Project .project-description{
+    width: 90%;
+}
+
+.Other-Project .project-card--buttons{
+    text-align: right;
+}
+.project-card--buttons i{
+    font-size: 24px;
+    color: #474544;
+    margin-right: 3px;
+}
+
+.project-card--buttons i:hover{
+    color: #ffc13b;
+}
+
+.project-card--buttons .smaller-icon{
+    font-size: 22px;
+}
+
+/*=======================================
+                  MOBILE
+=========================================*/
+@media only screen and (min-width:280px)and (max-width: 418px){
+    .Hero .section-title{
+        margin-top: 5%;
+        font-size: 35px;
+        text-align: left;
+    }
+    .Categories{
+        display: inline-block;
+        width: 100%;
+    }
+    #walk-through{
+        width: 100%;
+    }
+}
+
+/*===============================================================
+                            Tablet
+================================================================*/
+@media only screen and (min-width: 721px) and (max-width: 768px){
+    #about-intro .section-title{
+        font-size: 45px;
+        text-align: center;
+    }
+    .Categories{
+        bottom: 0;
+    }
+}
+/*===============================================================
+                            MACBOOK
+================================================================*/
+@media screen and (min-width: 1280px) and (max-width: 1440px){
+    #about-intro{
+        padding: 0 6% 0 6%;
+    }
+    #about-intro .section-title{
+        font-size: 50px;
+        text-align: center;
+    }
+    #content-map{
+        padding: 0 6% 0 6%;
+    }
+    #wireframe .section-title{
+        padding: 0 6% 0 6%;
+    }
+
+    #walk-through {
+        padding: 0 0 0 3%;
+    }
+
+}
+
+/*===============================================================
+                            Monitor
+================================================================*/
+@media (min-width: 1920px){
+    #about-intro{
+        padding: 0 20% 0 20%;
+    }
+    #about-intro .section-title{
+        font-size: 55px;
+        text-align: center;
+    }
+    #content-map{
+        padding: 0 20% 0 20%;
+    }
+    #wireframe .section-title{
+        padding: 0 20% 0 20%;
+    }
+
+    #walk-through {
+        padding: 0 0 3% 17%;
+    }
 }

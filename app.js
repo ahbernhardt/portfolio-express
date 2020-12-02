@@ -9,7 +9,6 @@ const express = require('express'),
     moment = require('moment');
 
 // load language json
-const skills = require('./public/data/skills.json');
 const projects = require('./public/data/projects.json');
 const path = require("ejs");
 
@@ -24,7 +23,7 @@ dotenv.config();
 const app = express();
 
 // app config
-app.set('views', path.join(__dirname, 'views'));
+
 app.set('view engine', 'ejs');
 
 // app middleware
@@ -33,6 +32,7 @@ app.use(minify());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static('public'));
+
 
 /*=======================
       GET PAGES
@@ -55,30 +55,12 @@ app.get('/about', (req, res) => {
 
 // Projects
 app.get('/featured', (req, res) => {
+    // const projects = {latest:[projects], others:[projects]}
     res.render('featured', {
         page:'Featured', menuId:'featured',
+        projects: projects
     });
 });
-// const getProjectLinks = () => {
-//     // search the projects json language fields, if language === project, Display project title with link.
-//     for (let skill of skills) {
-//         // for each skill, get the language
-//         let lang = skill.language;
-//         skill.projects = [];
-//         // search languages array of projects and return all matching projects.
-//         projects.map((project) => {
-//             const regex = new RegExp(`(${lang.split(' ')[0]})`, 'g', 'i');
-//             for (let item of project.languages) {
-//                 if (regex.test(item)) {
-//                     skill.projects.push({
-//                         name: project.name,
-//                         url: project.url
-//                     });
-//                 }
-//             }
-//         });
-//     }
-// };
 
 // Contact
 app.get('/contact', (req, res) => {

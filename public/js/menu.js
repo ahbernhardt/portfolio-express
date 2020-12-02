@@ -98,3 +98,70 @@ $('.slider').each(function() {
 
     advance();
 });
+
+
+
+
+// PROJECTSSSSS
+$('.ProjectCarousel').each(function() {
+    const $this = $(this);
+    const $group = $this.find('.List');
+    const $project = $this.find('.Project');
+    let currentIndex = 0;
+
+    function move(newIndex) {
+        var animateLeft, slideLeft;
+
+
+        if ($group.is(':animated') || currentIndex === newIndex) {
+            return;
+        }
+
+        if (newIndex > currentIndex) {
+            slideLeft = '100%';
+            animateLeft = '-100%';
+        } else {
+            slideLeft = '-100%';
+            animateLeft = '100%';
+        }
+
+        $project.eq(newIndex).css({
+            display: 'block',
+            left: slideLeft
+        });
+        $group.animate({
+            left: animateLeft
+        }, function() {
+            $project.eq(currentIndex).css({
+                display: 'none'
+            });
+            $project.eq(newIndex).css({
+                left: 0
+            });
+            $group.css({
+                left: 0
+            });
+            currentIndex = newIndex;
+        });
+    }
+
+
+    $('.next').on('click', function() {
+        if (currentIndex < ($project.length - 1)) {
+            move(currentIndex + 1);
+        } else {
+            move(0);
+        }
+    });
+
+    $('.prev').on('click', function() {
+        if (currentIndex !== 0) {
+            move(currentIndex - 1);
+        } else {
+            move(3);
+        }
+    });
+
+
+    advance();
+});
