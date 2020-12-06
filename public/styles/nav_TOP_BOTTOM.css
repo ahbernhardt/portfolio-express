@@ -378,6 +378,54 @@ nav {
 }
 
 /*===============================
+            Ipad
+=================================*/
+@media only screen and (min-width: 800px) and (max-width: 1279px){
+    #mainlogo {
+        padding-top: 2%;
+        padding-left: 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .menu {
+        padding-right: 5%;
+        margin-top: 3%;
+    }
+    .menu li {
+        padding-left: 15px;
+    }
+    /* FOOTER */
+    .footer {
+        border-top: solid 1px #e9e9e9;
+        align-items: baseline;
+        right: 0;
+    }
+
+    .copyright {
+        font-size: 10px;
+    }
+
+    .navbar-nav-footer {
+        width: auto;
+        margin-right: -3%;
+    }
+
+    .navbar-nav-footer li a {
+        font-size: 12px;
+        right: 0;
+    }
+
+    /* FOOTER-2 */
+    section.footer-2{
+        position: relative;
+    }
+}
+
+
+/*===============================
              MAC
 =================================*/
 @media only screen and (min-width: 1280px) and (max-width: 1440px){
@@ -424,14 +472,10 @@ nav {
     }
 }
 
-/*===============================
-             MAC 15
-=================================*/
-
 /*==============================================
             monitor
 ================================================*/
-@media screen and (min-width: 1920px) {
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
     #mainlogo {
         padding-top: 2%;
         padding-left: 5%;

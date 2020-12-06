@@ -1,101 +1,92 @@
-// load dependencies
 const express = require('express'),
     bodyParser = require('body-parser'),
-    nodeMailer = require('node-mailer'),
-    dotenv = require('dotenv'),
+    dotenv = require('dotenv').config(),
+    mongoose = require('mongoose'),
+    path = require('path'),
     compression = require('compression'),
     minify = require('express-minify'),
-    hljs = require('highlight.js'),
-    moment = require('moment');
+    moment = require('moment'),
+    MongoClient = require('mongodb').MongoClient
 
-// load language json
-const projects = require('./public/data/projects.json');
-const path = require("ejs");
 
-// Destructure dependencies list from package.json
-const {dependencies} = require('./package.json');
-const depArray = Object.keys(dependencies);
+//======================================
+//          DATABASE
+//======================================
+// Connect to database
+const option={
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}
+const uri = process.env.MONGODB_URI;
+const client = new MongoClient(uri, { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true})
 
-// set up environment variables
-dotenv.config();
+mongoose.connection.on("error", function(error) {
+    console.log(error)
+})
 
-// initialize app:
+mongoose.connection.on("open", function() {
+    console.log("Connected to MongoDB Atlas database.")
+})
+
+
+//======================================
+//          APP CONFIG
+//======================================
 const app = express();
-
-// app config
-
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// app middleware
+//======================================
+//          MIDDLEWARE
+//======================================
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.json());
+app.use(bodyParser.json());
 app.use(compression());
 app.use(minify());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
 app.use(express.static('public'));
 
 
-/*=======================
-      GET PAGES
-=======================*/
+//=====================================
+//          ROUTES
+//======================================
+const indexRouter = require('./routes/index');
+const featuredRouter = require('./routes/featured');
+const aboutRouter = require('./routes/about');
+const contactRouter = require('./routes/contact');
+const thanksRouter = require('./routes/thanks');
 
-// Index
-app.get('/', (req, res) => {
-    res.render('index', {
-        page:'Portfolio Website', menuId:'home',
-    });
-});
+app.use('/', indexRouter);
+app.use('/featured', featuredRouter);
+app.use('/about', aboutRouter);
+app.use('/contact', contactRouter);
+app.use('/thanks', thanksRouter);
 
-// About
-app.get('/about', (req, res) => {
-    res.render('about', {
-        page:'About', menuId:'about',
-    });
-});
+//=====================================
+//          POST to mongodb atlas
+//======================================
 
+app.post('/thanks', function (req, res, next) {
+    client.connect(err => {
+        const contacts = client.db("contact_list").collection("contact");
 
-// Projects
-app.get('/featured', (req, res) => {
-    // const projects = {latest:[projects], others:[projects]}
-    res.render('featured', {
-        page:'Featured', menuId:'featured',
-        projects: projects
-    });
-});
-
-// Contact
-app.get('/contact', (req, res) => {
-    res.render('contact', {
-        page:'Contact', menuId:'contact',
-        message: null
-    });
-});
-
-app.post('/contact', (req, res) => {
-    let transporter = nodeMailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.EMAIL,
-            pass: process.env.PASS
-        }
-    });
-    let mailOptions = {
-        from: '"Anh Nguyen" <a.nguyen0208@gmail.com>', // sender address
-        to: req.body.message.email, // list of receivers
-        subject: 'Your Message', // Subject line
-        text: req.body.message.text, // plain text body
-        html: `${req.body.message.text}` // html body
-    };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) return console.log(error);
-        console.log('Message %s sent: %s', info.messageId, info.response);
-        res.render('contact', {
-            message: req.body.message
+        let contact = {
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            email: req.body.email,
+            message: req.body.message,
+            date: Date.now()
+        };
+        contacts.insertOne(contact, function(err, res) {
+            if (err) throw err;
+            console.log("1 contact inserted");
         });
+        res.redirect('/thanks')
     });
-});
 
-// catch 404 and forward to error handler
+})
+
 app.use(function(req, res, next) {
     next(createError(404));
 });
@@ -112,10 +103,13 @@ app.use(function(err, req, res, next) {
         page: '404', menuId: '404',
     });
 });
-/*=======================
-    Start Server
-=======================*/
+
+module.exports = app;
+
+/*==========================================
+        Start Server
+=============================================*/
 app.listen(8080, () => {
     console.log(`server running on http://localhost:8080`);
-    // console.log(`server running on http://ec2-34-199-92-98.compute-1.amazonaws.com:8080/`);
 });
+
