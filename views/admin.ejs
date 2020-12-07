@@ -13,29 +13,36 @@
         <hr>
         <h3>Email List</h3>
         <hr>
-        <%   if(contacts.length > 0) { %>
-        <table class="table">
-            <thead class="thead-light">
-            <tr>
-                <th scope="col">First Name</th>
-                <th scope="col">Last Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Message</th>
-            </tr>
-            </thead>
-            <tbody>
-             <% contacts.forEach (contact => {  %>
-                <tr>
-                    <td><% contact.firstname %></td>
-                    <td><% contact.lastname %></td>
-                    <td><% contact.email %></td>
-                    <td><%  contact.message %></td>
-                </tr>
-            <% }) %>
-            </tbody>
-        </table>
-         <% } else {  %>
-         <% } %>
+
+        <% contacts.forEach(contacts => { %>
+            <p><%= contacts._id%></p>
+            <p><%= contacts.firstname%></p>
+            <p><%= contacts.lastname%></p>
+            <p><%= contacts.email%></p>
+            <p><%= contacts.message%></p>
+            <p><%= contacts.date%></p>
+        <% });%>
+<!--            <table class="table">-->
+<!--                <thead class="thead-light">-->
+<!--                <tr>-->
+<!--                    <th scope="col">First Name</th>-->
+<!--                    <th scope="col">Last Name</th>-->
+<!--                    <th scope="col">Email</th>-->
+<!--                    <th scope="col">Message</th>-->
+<!--                </tr>-->
+<!--                </thead>-->
+<!--                <tbody>-->
+<!--                contacts.forEach (contact => { -->
+<!--                    <tr>-->
+<!--                        <td>contact.firstname</td>-->
+<!--                        <td>contact.lastname</td>-->
+<!--                        <td>contact.email </td>-->
+<!--                        <td>contact.message</td>-->
+<!--                        <td>contact.date</td>-->
+<!--                    </tr>-->
+<!--                -->
+<!--                </tbody>-->
+<!--            </table>-->
     </section>
 </main>
 </body>

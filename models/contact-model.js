@@ -1,6 +1,6 @@
 // Import mongoose
 const mongoose = require("mongoose");
-// require('config/db');
+
 // Create Schema Instance
 const ContactSchema = new mongoose.Schema({
     firstname: {
@@ -26,14 +26,7 @@ const ContactSchema = new mongoose.Schema({
 });
 
 // create and export model
-ContactTable = mongoose.model("Contacts", ContactSchema);
+Contact = mongoose.model("contacts", ContactSchema);
 
-module.exports = {
-    addContact: function (inputData, callback){
-        let contactData = new ContactTable(inputData);
-        contactData.save(function (err, data){
-            if(err) throw err;
-            return callback(data);
-        })
-    }
-}
+module.exports = Contact;
+

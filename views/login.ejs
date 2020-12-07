@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+
+<body >
+<%- include('partials/header') %>
+
+<main class="content" >
+    <section class="contact-wrapper" id="contact">
+        <div class="direct-contact-container">
+            <h1 class="section-header">Login Page</h1>
+
+            <ul class="social-media-list">
+                <li>
+                    <a href="#" target="_blank" class="contact-icon">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank" class="contact-icon">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li><a href="#" target="_blank" class="contact-icon">
+                        <i class="fab fa-twitter" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" target="_blank" class="contact-icon">
+                        <i class="fab fa-instagram" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" target="_blank" class="contact-icon">
+                        <i class="fab fa-codepen" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+
+        <!--    FORM    -->
+        <form class="form-horizontal" id="login_form" method="POST"  action="/login">
+
+            <div class="form-group"> <!--     First Name       -->
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="firstname" placeholder="username" name="username" value="" required>
+                </div>
+            </div>
+
+            <div class="form-group"><!--     Last Name       -->
+                <div class="col-sm-12">
+                    <input type="password" class="form-control" id="password" placeholder="password" name="password" value="" required>
+                </div>
+            </div>
+
+            <button class="btn btn-primary send-button" id="login_submit" type="submit" value="Submit">
+                <div class="button">
+                    <i class="fa fa-paper-plane"></i><span class="send-text">Login</span>
+                </div>
+
+            </button>
+        </form>
+        <iframe src="https://giphy.com/embed/2A1FfWjPqZdpXYb9Ur" width="320" height="300" frameBorder="0" ></iframe>
+    </section>
+</main>
+
+<%- include('partials/footer-2') %>
+</body>
+<%- include('partials/scripts') %>
+</html>
