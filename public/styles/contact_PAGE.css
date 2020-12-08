@@ -156,7 +156,8 @@
 =========================================================*/
 @media only screen and (min-width: 280px) and (max-width: 418px) {
     #contact {
-        margin-bottom: 5%;
+        margin-bottom: -5px;
+        padding-bottom: -5px;
     }
     .section-header {
         font-size: 35px;
@@ -183,6 +184,11 @@
 
     .form-control, textarea{
         width: 300px;
+    }
+
+    .contact-wrapper iframe{
+        bottom: 0;
+        padding-top: 60px;
     }
 }
 

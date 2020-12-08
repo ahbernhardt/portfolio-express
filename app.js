@@ -5,8 +5,8 @@ const express = require('express'),
     path = require('path'),
     compression = require('compression'),
     minify = require('express-minify'),
+    MongoClient = require('mongodb').MongoClient,
     session = require('express-session');
-    MongoClient = require('mongodb').MongoClient
 
 
 //======================================
@@ -15,7 +15,8 @@ const express = require('express'),
 // Connect to database
 const option={
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex:true
 }
 
 const client = new MongoClient(process.env.MONGODB_URI, option)
@@ -55,7 +56,6 @@ const aboutRouter = require('./routes/about');
 const contactRouter = require('./routes/contact');
 const thanksRouter = require('./routes/thanks');
 const loginRouter = require('./routes/login');
-// const adminRouter = require('./routes/admin');
 
 app.use('/', indexRouter);
 app.use('/featured', featuredRouter);
@@ -63,8 +63,6 @@ app.use('/about', aboutRouter);
 app.use('/contact', contactRouter);
 app.use('/thanks', thanksRouter);
 app.use('/login', loginRouter);
-// app.use('/admin', adminRouter);
-
 
 //=====================================
 //          POST to mongodb atlas
@@ -76,14 +74,13 @@ app.post('/thanks', function (req, res, next) {
 
         const {firstname, lastname, email, message} = req.body; //getting insert form contact form
         const newContact = new Contact({firstname, lastname, email, message}) // create new contact object
-        contacts.insertOne(newContact, function(err, res) {
+        contacts.insertOne(newContact ,function(err, res) {
             if (err) throw err;
             console.log("1 contact inserted");
             return client.close();
         });
         res.redirect('/thanks')
     })
-
 });
 
 app.get("/admin", (req, res) => {
@@ -136,7 +133,7 @@ app.use(function(req, res, next) {
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function(err, req, res) {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};

@@ -1,3 +1,4 @@
+
 .Hero {
     width: 100%;
     height: auto;
@@ -61,6 +62,15 @@
     width: 80%;
     font-size: 20px;
 }
+.tag-group__tag{
+    justify-self: center;
+}
+.tag-group__tag--card{
+    border: solid 1px #d4d4d4;
+    border-radius: 3px;
+    padding: 0 5px 0 5px;
+}
+
 .Project-image{
     width: 45%;
     height: 100%;
@@ -94,15 +104,15 @@
     outline: none;
     background: none;
     padding: 0;
-    border-left: 3px solid black;
-    border-bottom: 3px solid black;
+    border-left: 2px solid #dedede;
+    border-bottom: 2px solid #dedede;
     cursor: pointer;
     transform: rotate(45deg);
 }
 
 .next{
      border-left: none;
-     border-right: 3px solid black;
+     border-right: 2px solid #dedede;
      transform: rotate(-45deg);
 }
 
@@ -114,9 +124,9 @@
 }
 .Other-Project{
     width: 30%;
-    border: solid 1px #000;
+    border: solid 1px #9d9d9d;
     padding: 1% 3% 1% 3%;
-    box-shadow: 10px 10px black;
+    box-shadow: 10px 10px #dedede;
 }
 
 .Other-Project:hover{
@@ -153,17 +163,81 @@
                   MOBILE
 =========================================*/
 @media only screen and (min-width:280px)and (max-width: 418px){
-    .Hero .section-title{
-        margin-top: 5%;
+    #latest-project{
+        width: 100%;
+    }
+    .ProjectCarousel{
+        margin-left: -6%;
+        width: 110%;
+        height: 441px;
+    }
+    .Project{
+        display: inline-flex;
+        flex-direction: column;
+    }
+    .Project-Info{
+        width: 90%;
+        height: 45%;
+        margin: 0 0 7% 7% ;
+        padding-top: 0;
+    }
+    .Title {
+        font-family: "Canela", sans-serif;
         font-size: 35px;
-        text-align: left;
+        line-height: 40px;
     }
-    .Categories{
-        display: inline-block;
+    .project-description{
+        font-family: "Nimbus", sans-serif;
+        width: 95%;
+        font-size: 16px;
+    }
+    .section__subtitle{
+        font-size: 12px;
+    }
+    .Project-image{
+        width: 100%;
+        height: 60%;
+        margin-top: 0;
+    }
+    .Project-image img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover !important;
+    }
+
+    .tag-group__tag--card{
+        border: solid 1px #d4d4d4;
+        border-radius: 3px;
+        padding: 0 5px 0 5px;
+    }
+    .Controls{
+        width: 101%;
+        margin-left: 0;
+    }
+    .Control{
+        width: 12px;
+        height: 12px;
+    }
+    .next{
+        padding-left: 3px;
+        border-left: none;
+        border-right: 2px solid #dedede;
+        transform: rotate(-45deg);
+    }
+    #latest-project{
         width: 100%;
     }
-    #walk-through{
+    #other-projects{
+        margin-top: -10%;
+        padding-bottom: 5%;
+    }
+    .Other-wrapper{
         width: 100%;
+        display: block;
+    }
+    .Other-Project{
+        width: 90%;
+        margin-bottom: 8%;
     }
 }
 
@@ -171,57 +245,124 @@
                             Tablet
 ================================================================*/
 @media only screen and (min-width: 721px) and (max-width: 768px){
-    #about-intro .section-title{
+    #featured-intro .section-title{
         font-size: 45px;
         text-align: center;
     }
-    .Categories{
-        bottom: 0;
+    #latest-project{
+        width: 100%;
+    }
+    .ProjectCarousel{
+        margin-left: -6%;
+        width: 110%;
+        height: 441px;
+    }
+    .Project{
+        display: inline-flex;
+        flex-direction: column;
+    }
+    .Project-Info{
+        width: 90%;
+        height: 45%;
+        margin: 0 0 7% 7% ;
+        padding-top: 0;
+    }
+    .Title {
+        font-family: "Canela", sans-serif;
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .project-description{
+        font-family: "Nimbus", sans-serif;
+        width: 95%;
+        font-size: 16px;
+    }
+    .section__subtitle{
+        font-size: 12px;
+    }
+    .Project-image{
+        width: 100%;
+        height: 60%;
+        margin-top: 0;
+    }
+    .Project-image img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover !important;
+    }
+
+    .tag-group__tag--card{
+        border: solid 1px #d4d4d4;
+        border-radius: 3px;
+        padding: 0 5px 0 5px;
+    }
+    .Controls{
+        width: 100%;
+        margin-left: 0;
+    }
+    .Control{
+        width: 12px;
+        height: 12px;
+    }
+    .next{
+        padding-left: 3px;
+        border-left: none;
+        border-right: 2px solid #dedede;
+        transform: rotate(-45deg);
+    }
+    #latest-project{
+        width: 100%;
+    }
+    .Other-wrapper{
+        width: 100%;
+        display: inline-flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .Other-Project{
+        width: 47%;
+        border: solid 1px #9d9d9d;
+        padding: 0 3% 1% 3%;
+        margin-bottom: 5%;
+        box-shadow: 10px 10px #dedede;
     }
 }
 /*===============================================================
                             MACBOOK
 ================================================================*/
 @media screen and (min-width: 1280px) and (max-width: 1440px){
-    #about-intro{
+    #featured-intro{
         padding: 0 6% 0 6%;
     }
-    #about-intro .section-title{
+    #featured-intro .section-title{
         font-size: 50px;
         text-align: center;
     }
-    #content-map{
+    #latest-project{
         padding: 0 6% 0 6%;
     }
-    #wireframe .section-title{
+    #other-projects{
         padding: 0 6% 0 6%;
     }
-
-    #walk-through {
-        padding: 0 0 0 3%;
-    }
-
 }
 
 /*===============================================================
                             Monitor
 ================================================================*/
 @media (min-width: 1920px){
-    #about-intro{
+    #featured-intro{
         padding: 0 20% 0 20%;
     }
-    #about-intro .section-title{
+    #featured-intro .section-title{
         font-size: 55px;
         text-align: center;
     }
-    #content-map{
+    #latest-project{
         padding: 0 20% 0 20%;
     }
-    #wireframe .section-title{
+    #other-projects{
         padding: 0 20% 0 20%;
-    }
-
-    #walk-through {
-        padding: 0 0 3% 17%;
     }
 }

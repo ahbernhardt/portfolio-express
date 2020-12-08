@@ -8,13 +8,12 @@
 <main class="content">
     <section id="featured-intro">
         <h1 class="section-title">Featured Page</h1>
-        <p>This page displays the various project deliverables throughout the semester as well as sections to describe
-            how I fulfilled the different project requirements and resources used.</p>
+        <p>This page shows the various beautiful projects that I designed and developed.
+            I focus primarily on building, prototyping and implementing user interfaces that are usable and scalable for any web-based platform.</p>
     </section>
     <section id="latest-project">
         <h1 class="section-title">Latest Projects</h1>
-        <p>Latest projects I designed and developed</p>
-        <p> <br></p>
+        <br>
         <div class="ProjectCarousel">
             <div class="List">
                 <div class="Projects">
@@ -29,7 +28,7 @@
                                 <h4 class="section__subtitle">Technologies used:</h4>
                                 <div class="tag-group">
                                     <% latest.languages.forEach(language => { %>
-                                        <span class="tag-group__tag tag-group__tag--card"><%= language %> - </span>
+                                        <span class="tag-group__tag tag-group__tag--card"><%= language %></span>
                                     <% }) %>
                                 </div>
                             </div>
@@ -65,10 +64,10 @@
             <div class="Other-Project">
                 <div class="project-card--buttons">
                     <% if (other.repo) { %>
-                        <a href="<%= other.repo %>"><i class="fab fa-github-square"></i> </a>
+                        <a href="<%= other.repo %>" target="_blank"><i class="fab fa-github-square" ></i> </a>
                     <% } %>
                     <% if (other.link) { %>
-                        <a href="<%= other.link %>"><i class="fas fa-desktop smaller-icon"></i></a>
+                        <a href="<%= other.link %>" target="_blank"><i class="fas fa-desktop smaller-icon"></i></a>
                 </div>
                 <h3 class="Title"> <%- other.title %></h3>
                 <p class="project-description">
@@ -78,7 +77,7 @@
                     <h5 class="section__subtitle">Technologies used:</h5>
                     <div class="tag-group">
                         <% other.languages.forEach(language => { %>
-                            <span class="tag-group__tag tag-group__tag--card"><%= language %> - </span>
+                            <span class="tag-group__tag tag-group__tag--card"><%= language %></span>
                         <% }) %>
                     </div>
                 </div>
