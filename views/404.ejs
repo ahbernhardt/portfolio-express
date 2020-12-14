@@ -3,11 +3,16 @@
 <%- include('partials/head') %>
 <body >
     <%- include('partials/header') %>
-
     <main class="content">
         <section class="container_404" id="error_container">
-            <h1 class="error_title">ERROR</h1>
-            <iframe src="https://giphy.com/embed/8L0Pky6C83SzkzU55a" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            <h1 class="error_title">Uh-Oh! Not Found</h1>
+            <p class="error_p">You’re in the middle of nowhere. The page you requested either was moved or doesn’t exist.</p>
+            <canvas width="560" height="312"></canvas>
+            <br>
+            <hr>
+            <p class="error_p">What you can do: <br>
+                Go back <a href="/">home</a> | <a href="/contact">Contact</a> to me if you believe this happened in error.
+            </p>
         </section>
     </main>
     <%- include('partials/footer-2') %>

@@ -71,6 +71,7 @@ const aboutRouter = require('./routes/about');
 const contactRouter = require('./routes/contact');
 const thanksRouter = require('./routes/thanks');
 const loginRouter = require('./routes/login');
+const errorRouter = require('./routes/404');
 
 app.use('/', indexRouter);
 app.use('/featured', featuredRouter);
@@ -78,6 +79,7 @@ app.use('/about', aboutRouter);
 app.use('/contact', contactRouter);
 app.use('/thanks', thanksRouter);
 app.use('/login', loginRouter);
+app.use('/404', errorRouter);
 
 //=====================================
 //          POST to mongodb atlas
