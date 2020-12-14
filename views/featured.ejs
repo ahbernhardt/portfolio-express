@@ -56,9 +56,8 @@
         </div>
     </section>
 
-    <section id="other-projects" style="padding-top: 75px; margin-bottom:25px">
-        <h1 class="section-title">Others</h1>
-
+    <section id="other-projects" style="padding-top: 50px; margin-bottom: 75px">
+        <h1 class="section-title">Other Coding Projects</h1>
         <div  class="Other-wrapper"> <!-- Wrapper -->
             <% projects.others.forEach(other => { %>
             <div class="Other-Project">
@@ -87,6 +86,59 @@
         </div>
     </section>
 
+    <section id="Graphic-Design">
+        <h1 class="section-title">Graphic Design</h1>
+        <div class="slider">
+            <div class="slide_viewer">
+                <div class="slide_group">
+                    <div class="slide">
+                        <img src="/images/graphics/jungsik_package.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="/images/graphics/surface_1.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="/images/graphics/tad_tshirt.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="/images/graphics/tabasco.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div><!-- End // .slider -->
+
+        <!--     slider dots           -->
+        <div class="slide_buttons"></div>
+        <div class="directional_nav">
+            <div class="previous_btn" title="Previous">
+                <svg version="1.1"
+                     xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                     x="0px"
+                     y="0px"
+                     width="75px"
+                     height="75px"
+                     viewBox="0 0 35 35">
+                    <path fill="#474544"
+                          d="M25.43,33.243L14.628,22.429c-0.433-0.432-0.433-1.132,0-1.564L25.43,10.051c0.432-0.432,1.132-0.432,1.563,0	c0.431,0.431,0.431,1.132,0,1.564L16.972,21.647l10.021,10.035c0.432,0.433,0.432,1.134,0,1.564"/>
+                </svg>
+            </div>
+            <div class="next_btn" title="Next">
+                <svg version="1.1"
+                     xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                     x="0px"
+                     y="0px"
+                     width="75px"
+                     height="75px"
+                     viewBox="0 0 35 35">
+                    <path fill="#474544"
+                          d="M18.022,33.569c 0.282,0-0.566-0.105-0.781-0.323c-0.432-0.431-0.432-1.132,0-1.564l10.022-10.035 			L17.241,11.615c 0.431-0.432-0.431-1.133,0-1.564c0.432-0.432,1.132-0.432,1.564,0l10.803,10.814c0.433,0.432,0.433,1.132,0,1.564 L18.805,33.243C18.59,33.464,18.306,33.569,18.022,33.569z"/>
+                </svg>
+            </div>
+        </div>
+
+    </section>
 </main>
 
 <%- include('partials/footer-2') %>

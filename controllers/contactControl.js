@@ -2,18 +2,6 @@
 const  Contact = require("../models/contact-model");
 
 // DEFINE CONTROLLER FUNCTIONS
-// module.exports={
-//     contactForm:function(req,res){
-//         res.render('contact')
-//     },
-//     addContact:function(req, res){
-//         const inputData= req.body;
-//         contactModel.addContact(inputData, function(){
-//             res.render('contact')
-//             console.log("Added contact to the list");
-//         });
-//     }
-// }
 exports.createNewContact = (req, res) => {
     let  newContact = new Contact (req.body);
     newContact.save((err, contact) => {

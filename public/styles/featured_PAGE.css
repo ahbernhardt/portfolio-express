@@ -159,6 +159,9 @@
     font-size: 22px;
 }
 
+#Graphic-Design{
+    height: 750px;
+}
 /*=======================================
                   MOBILE
 =========================================*/
@@ -224,9 +227,7 @@
         border-right: 2px solid #dedede;
         transform: rotate(-45deg);
     }
-    #latest-project{
-        width: 100%;
-    }
+
     #other-projects{
         margin-top: -10%;
         padding-bottom: 5%;
@@ -238,6 +239,9 @@
     .Other-Project{
         width: 90%;
         margin-bottom: 8%;
+    }
+    #Graphic-Design{
+        height: 425px;
     }
 }
 
@@ -328,6 +332,9 @@
         margin-bottom: 5%;
         box-shadow: 10px 10px #dedede;
     }
+    #Graphic-Design{
+        height: 675px;
+    }
 }
 /*===============================================================
                             MACBOOK
@@ -344,6 +351,9 @@
         padding: 0 6% 0 6%;
     }
     #other-projects{
+        padding: 0 6% 0 6%;
+    }
+    #Graphic-Design .section-title{
         padding: 0 6% 0 6%;
     }
 }
@@ -363,6 +373,9 @@
         padding: 0 20% 0 20%;
     }
     #other-projects{
+        padding: 0 20% 0 20%;
+    }
+    #Graphic-Design .section-title{
         padding: 0 20% 0 20%;
     }
 }

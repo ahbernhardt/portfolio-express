@@ -1,0 +1,75 @@
+[
+  {
+    "requirement": "Content Map",
+    "description": "Displayed in the 'Conntent Map' section of <a href='/about#content-map'>About</a> page."
+  },
+  {
+    "requirement": "Wireframe",
+    "description": "Displayed in the 'Wireframes' section of <a href='/about#wireframe'>About</a> page."
+  },
+  {
+    "requirement": "4 Top Level Sections",
+    "description": "Site is divided into the <a href='/'>Home</a>, <a href='/featured'>Featured</a>,<a href='/about'>About</a>, and <a href='/contact'>Contact</a> pages."
+  },
+  {
+  "requirement": "Unique Favicon",
+  "description": "Displayed on the browser tab."
+  },
+  {
+    "requirement": "CSS Icon or Sprites",
+    "description": "I used <a href='https://fontawesome.com/icons?d=gallery'>Font Awesome</a> icons for my social icons on the <a href='/contact'>Contact</a> page. I used Glyphs to display the copyright symbol ©."
+  },
+  {
+    "requirement": "Video Element",
+    "description": "I included some fun gif to make it more welcoming for the site on the <a href='/contact'>Contact</a>, <a href='/thanks'>Thank You</a>, and <a href='/login'>Admin</a> page."
+  },
+  {
+    "requirement": "Audio Element",
+    "description": "I created and embedded Spotify's playlist the specified for this project. It is in the footer of <a href='/about#footer-2'>About</a>, <a href='/featured#footer-2'>Featured</a>, <a href='/contact#footer-2'>Contact</a> pages."
+  },
+  {
+    "requirement": "Slideshow/Carousel",
+    "description": "The Featured page uses a slideshow to displays the <a href='/featured#latest-project'>latest projects</a> section. I also uses a carousel to display the <a href='/featured#Graphic-Design'>graphic design</a> and <a href='/about#wireframe'>wireframes</a> images. Both slideshow and carousel is controlled by left and right arrows."
+  },
+  {
+    "requirement": "Webfont",
+    "description": "I used external custom fonts from Google fonts (<a href='https://www.fonts.com/font/urw/nimbus-sans?QueryFontType=Web&src=GoogleWebFonts'>Nimbus Sans</a> and <a href='https://www.onlinewebfonts.com/download/4a24899e94d8236f671c1090cd9e068c'>Canela</a>). I included fonts package in the project public folder."
+  },
+  {
+    "requirement": "Flexbox",
+    "description": "I used this concept throughout the website such as top navigation, footer, featured section, and mobile screen size."
+  },
+  {
+    "requirement": "Canvas Element",
+    "description": "Portfolio website build with Jekyll, Gulp, React, and deploy with GH-Pages "
+  },
+  {
+    "requirement": "SVG element",
+    "description": "The main instance of SVG element is the logo of the website. "
+  },
+  {
+    "requirement": "HTML5 Form and Validation",
+    "description": "On the <a href='/contact'>Contact</a> page, the form requires that a person fills out at their first name, last name, a valid email, and some feedback messages before they are allowed to click the submit button."
+  },
+  {
+    "requirement": "Footer Navigation",
+    "description": "Every page implements footer navigation."
+  },
+  {
+    "requirement": "Server-side Storage",
+    "description": "When someone fills out the contact form on the <a href='/contact'>Contact</a> page, their information is stored in a Mongodb Atlas database. This information can only be seen on the <a href='/login'>Admin</a> page."
+  },
+  {
+    "requirement": "Authentication",
+    "description": "This site has an <a href='/login'>Admin</a> page where you can see all the emails that have been collected. There is a required username and password to be admitted to this page. The credentials are username=anhnguyen and password=seisfinalproject."
+  },
+  {
+    "requirement": "Sessions",
+    "description": "Use Express-Session"
+  },
+  {
+    "requirement": "Extra: JSON Data",
+    "description": "On the <a href='/featured'>Featured</a> page, all information of <a href='/featured#latest-project'>latest projects</a> and <a href='/featured#other-projects'>other codding projects</a> sections are stored in a same JSON file (projects.json). I also used JSON on the <a href='/about#walkthrough'>Walkthrough</a> section in About page to show all requirement for this website."
+
+  }
+]

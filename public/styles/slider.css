@@ -1,8 +1,7 @@
 /* Global */
 .slider {
-    margin: 20px auto;
-    padding-left: 1%;
-    max-width: 960px;
+    margin: 20px 16% 2% 22%;
+    max-width: 1080px;
 }
 
 .slide_viewer {
@@ -12,7 +11,7 @@
 }
 
 .slide_group {
-    height: 525px;
+    height: 580px;
     position: relative;
     width: 100%;
 }
@@ -20,35 +19,23 @@
 .slide {
     display: block;
     height: auto;
-    background: #d4d4d4;
     position: relative;
     text-align: center;
 }
 
 .slide img{
-    padding: 2% 0 2% 0;
-    width: 96%;
-    max-height: 540px;
-    object-fit: scale-down !important;
+    width: 900px;
+    height: 580px;
+    object-fit: fill !important;
 }
 
-.small-image{
-    width: 90%;
-    height: auto;
-}
-
-.slide p{
-    font-family: "Nimbus-Bold", sans-serif;
-    text-align: center;
-    font-size: 20px;
-}
 
 /* slider dots*/
 .slide_buttons {
     background: transparent;
     left: 0;
     right: 0;
-    bottom: 15px;
+    bottom: 5%;
     position: relative;
     text-align: center;
     top: -30px;
@@ -73,14 +60,14 @@ a.slide_btn {
 .directional_nav {
     height: 50px;
     margin: 0 auto;
-    max-width: 1080px;
+    max-width: 1024px;
     position: relative;
     bottom: 400px;
 }
 
 .previous_btn {
     bottom: 0;
-    left: -10px;
+    left: 5%;
     margin: auto;
     position: absolute;
     top: 0;
@@ -90,7 +77,7 @@ a.slide_btn {
     bottom: 0;
     margin: auto;
     position: absolute;
-    right: -40px;
+    right: -5%;
     top: 0;
 }
 
@@ -110,54 +97,53 @@ a.slide_btn {
 .previous_btn:hover, .next_btn:hover {
     opacity: 1;
 }
-
-@media only screen and (max-width: 1280px) {
+@media only screen and (min-width: 1920px){
     .slider {
-        max-width: 920px;
+        margin: 20px 16% 2% 22%;
+        max-width: 1080px;
+    }
+}
+@media screen and (min-width: 1280px) and (max-width: 1440px) {
+    .slider {
+        margin: 20px 0 2% 5%;
+        max-width: 960px;
     }
 
     .slide_viewer {
-        height: 530px;
+        height: 580px;
     }
 
     .slide img{
-        margin-top: -2%;
-        padding: 2%;
-        max-height: 500px;
-        object-fit: scale-down !important;
+        width: 850px;
+        height: 580px;
+        object-fit: fill !important;
     }
-    .small-image{
-        width: 96%;
-        height: auto;
-    }
-    .slide p{
-        font-size: 18px;
-        text-align: center;
-        padding-top: 1%;
-    }
+
     .directional_nav {
         bottom: 350px;
     }
+    .next_btn {
+        bottom: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 721px) and (max-width: 768px) {
+    .slider {
+        margin: 20px 0 2% 1%;
+        max-width: 700px;
+    }
     .slide_viewer {
-        height: 530px;
+        height: 508px;
     }
 
     .slide img{
-        margin-top: -2%;
-        padding: 2%;
-        max-height: 500px;
-        object-fit: scale-down !important;
-    }
-    .small-image{
-        height: 500px;
-    }
-    .slide p{
-        font-size: 18px;
-        text-align: center;
-        padding-top: 1%;
+        width: 100%;
+        height: 508px;
+        object-fit: fill !important;
     }
     .directional_nav {
         bottom: 350px;
@@ -171,31 +157,28 @@ a.slide_btn {
     }
 }
 
-@media only screen and (max-width: 418px) {
+@media only screen and (min-width:280px)and (max-width: 418px){
     .slider{
-        width: 120%;
-        margin-left: -10%;
+        margin: 20px 0 2% 0;
+        width: 325px;
+        height: 300px;
     }
     .slide_viewer {
-        height: auto;
+        height: 300px;
     }
-
+    .slide{
+        margin-left: 2%;
+        left: 0;
+        text-align: left;
+    }
     .slide img{
-        margin-top: -2%;
-        padding: 2%;
-        max-height: 490px;
+        width: 96%;
+        height: 300px;
         object-fit: scale-down !important;
     }
-    .small-image{
-        height: 500px;
-    }
-    .slide p{
-        font-size: 18px;
-        text-align: center;
-        padding-top: 2%;
-    }
+
     .directional_nav {
-        bottom: 350px;
+        bottom: 250px;
     }
 
     .previous_btn, .next_btn {

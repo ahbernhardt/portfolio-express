@@ -15,7 +15,19 @@
     font-size: 120px;
 }
 
-@media screen and (max-width: 1920px) {
+#welcome-sub{
+    padding-left: 25%;
+}
+
+#welcome-sub li{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+/*===============================================================
+                            MONITOR
+================================================================*/
+@media screen and (min-width: 1920px) {
 
     .Welcome{
         padding-top: 5%;
@@ -26,28 +38,36 @@
         font-weight: 700;
         font-size: 200px;
     }
+    #welcome-sub{
+        padding-left: 60%;
+    }
+    #welcome-sub li{
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 14px;
+    }
 }
-@media screen and (max-width: 1440px) {
+/*===============================================================
+                            MACBOOK
+================================================================*/
+@media screen and (min-width: 1280px) and (max-width: 1440px) {
     .Welcome{
-        padding-top: 10%;
+        padding-top: 8%;
         font-size: 100px;
     }
     .Welcome span{
         font-weight: 700;
         font-size: 120px;
     }
+    #welcome-sub{
+        padding-left: 55%;
+    }
 }
 
-@media screen and (max-width: 1280px) {
-    .Welcome{
-        font-size: 85px;
-    }
-    .Welcome span{
-        font-weight: 700;
-        font-size: 120px;
-    }
-}
-@media screen and (max-width: 768px) {
+/*===============================================================
+                           TABLET
+================================================================*/
+@media only screen and (min-width: 721px) and (max-width: 768px){
     .content{
         width: 100%;
         height: auto;
@@ -62,9 +82,21 @@
         font-weight: 700;
         font-size: 100px;
     }
+    #welcome-sub{
+        padding-left: 55%;
+    }
+
+    #welcome-sub li{
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
 }
 
-@media (min-width: 280px) and (max-width: 418px) {
+/*===============================================================
+                            PHONE
+================================================================*/
+@media only screen and (min-width: 280px) and (max-width: 418px) {
     .content{
         width: 100%;
         height: auto;
@@ -78,6 +110,15 @@
     .Welcome span{
         font-weight: 700;
         font-size: 58px;
+    }
+    #welcome-sub{
+        padding-left: 38%;
+    }
+
+    #welcome-sub li{
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 1px;
     }
 }
 

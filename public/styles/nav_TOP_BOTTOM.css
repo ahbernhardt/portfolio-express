@@ -14,23 +14,18 @@ nav {
     margin: 0;
 }
 
-.logo {
-    font-family: "Nimbus-Bold", sans-serif;
-    font-size: 18px;
-    line-height: 18px;
-    letter-spacing: 3px;
-    color: black;
-    text-transform: uppercase;
+svg{
+    width: 32px;
+    height: 32px;
+    stroke: #000000;
 }
 
-.logo span {
-    font-family: "Nimbus-Light", sans-serif;
-}
-
-.logo:hover {
-    color: gray !important;
+a:hover  svg {
+    stroke: gray !important;
     text-decoration: none;
+    transform: scale(1.2);
 }
+
 
 /* Menu Button*/
 .burger {
@@ -80,15 +75,7 @@ nav {
     text-transform: uppercase;
     position: relative;
     text-decoration: none;
-}
-
-.menu li a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    opacity: 0;
-    height: 2px;
-    width: 50%;
+    padding-left: 10px;
 }
 
 .menu li a:hover {
@@ -202,11 +189,6 @@ nav {
              MOBILE
 =========================================================*/
 @media only screen and (min-width: 280px) and (max-width: 418px) {
-    .logo {
-        font-size: 15px;
-        letter-spacing: 2px;
-        padding-left: 15px;
-    }
     .burger {
         display: block;
         margin-top: 8px;
@@ -220,7 +202,7 @@ nav {
         position: fixed;
         right: 0;
         padding-top: 130px;
-        padding-right: 105px;
+        padding-right: 110px;
         width: 50%;
         transform: translateX(120%);
         transition: transform 0.3s ease-in;
@@ -231,7 +213,7 @@ nav {
     }
 
     .menu li {
-        margin: 0;
+        margin-right: -5px;
         padding-bottom: 5px;
     }
 
@@ -310,10 +292,6 @@ nav {
         padding-left: 5%;
     }
 
-    .logo {
-        font-size: 12px;
-    }
-
     .burger {
         display: block;
         margin-top: 20px;
@@ -385,11 +363,6 @@ nav {
         padding-top: 2%;
         padding-left: 5%;
     }
-
-    .logo {
-        font-size: 20px;
-    }
-
     .menu {
         padding-right: 5%;
         margin-top: 3%;
@@ -433,11 +406,6 @@ nav {
         padding-top: 2%;
         padding-left: 5%;
     }
-
-    .logo {
-        font-size: 20px;
-    }
-
     .menu {
         padding-right: 5%;
         margin-top: 3%;
@@ -480,11 +448,6 @@ nav {
         padding-top: 2%;
         padding-left: 5%;
     }
-
-    .logo {
-        font-size: 20px;
-    }
-
     ul.menu {
         margin: 2% 0;
         padding-right: 10%;
