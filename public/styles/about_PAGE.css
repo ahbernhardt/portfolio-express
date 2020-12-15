@@ -1,3 +1,7 @@
+#about-intro p{
+    font-family: "Nimbus", sans-serif;
+    font-size: 16px;
+}
 #wireframe{
     height: 750px;
 }
@@ -34,7 +38,7 @@
 .SubCategory {
     position: relative;
     padding-left: 20px;
-    margin-bottom: 55px;
+    margin-bottom: 35px;
 }
 
 .SubCategory:before {
@@ -49,7 +53,7 @@
 
 
 .SubCategoryTitle{
-    font-family: Nimbus-Black, sans-serif;
+    font-family: "Nimbus-Black", sans-serif;
     font-size: 32px;
     line-height: 40px;
 }
@@ -57,18 +61,9 @@
 
 .SubCategorySubtitle {
     font-size: 24px;
-    line-height: 32px;
-    margin-top: 5%;
+    line-height: 26px;
+    margin-top: 8%;
 }
-
-.SubCategoryDescription {
-    font-family: Nimbus-Bold, sans-serif;
-    font-size: 20px;
-    line-height: 24px;
-    color: #4e4e4e;
-    margin-top: 5%;
-}
-
 
 .About-List {
     list-style-type: none;
@@ -77,15 +72,17 @@
 .Item {
     list-style-type: none;
     font-family: "Nimbus", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     color: black;
+    padding-bottom: 10px;
 }
 
 .Item span{
     font-family: "Nimbus-Bold", sans-serif;
     font-weight: 500;
+    font-size: 18px;
 }
 
 /*=======================================
@@ -146,6 +143,9 @@
         font-size: 50px;
         text-align: center;
     }
+    #about-intro p{
+        font-size: 20px;
+    }
     #content-map .section-title{
         padding: 0 6% 0 6%;
     }
@@ -176,6 +176,9 @@
     #about-intro .section-title{
         font-size: 55px;
         text-align: center;
+    }
+    #about-intro p{
+        font-size: 20px;
     }
     #content-map .section-title{
         padding: 0 20% 0 20%;

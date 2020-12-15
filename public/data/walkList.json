@@ -65,7 +65,7 @@
   },
   {
     "requirement": "Sessions",
-    "description": "Use Express-Session"
+    "description": "Use to check the <a href='/admin'>Admin</a> path and redirect to login page. It also show the cookie session of Admin sign-in."
   },
   {
     "requirement": "Extra: JSON Data",

@@ -47,20 +47,23 @@ app.set('view engine', 'ejs');
 //======================================
 //          MIDDLEWARE
 //======================================
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(compression());
 app.use(minify());
 app.use(express.static('public'));
+
 app.use(session({
-    secret: 'This is a secret',
+    name: 'session_id',
+    resave: false,
+    saveUninitialized: false,
+    secret: 'sshhh! It is secret',
     cookie: {
-        maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
-    },
-    store: store,
-    resave: true,
-    saveUninitialized: true
+        path:'/login',
+        maxAge: 1000 * 60 * 30,  // 30 mins
+        sameSite: true,
+    }
 }));
 //=====================================
 //          ROUTES
@@ -88,7 +91,6 @@ const Contact = require('./models/contact-model')
 app.post('/thanks', function (req, res, next) {
     client.connect(err => {
         const contacts = client.db("SEIS751_Final_Project").collection("contacts");
-
         const {firstname, lastname, email, message} = req.body; //getting insert form contact form
         const newContact = new Contact({firstname, lastname, email, message}) // create new contact object
         contacts.insertOne(newContact ,function(err, res) {
@@ -103,23 +105,48 @@ app.post('/thanks', function (req, res, next) {
 //         ADMIN Login (authentication and authorization)
 //         to to see admin page
 //============================================================
-app.post('/login', function (req, res) {
-    const {username, password} = req.body; //getting insert form contact form
+app.post('/login', (req, res) => {
+    const {username, password} = req.body //getting insert form contact form
     if(username === process.env.USERNAME && password !== process.env.PASSWORD){
-        res.redirect('/404')
+        res.redirect('/login')
         console.log('Invalid Inputs')
     }
     if(username !== process.env.USERNAME && password !== process.env.PASSWORD){
-        res.redirect('/404')
+        res.redirect('/login')
         console.log('Invalid Inputs')
     }
     if(username === process.env.USERNAME && password === process.env.PASSWORD){
-        res.redirect('/admin')
+        client.connect( err =>{
+            let contactCol = client.db("SEIS751_Final_Project").collection("contacts");
+            Contact.find({}, function(err, allContact){
+                if(err){
+                    res.render('/404')
+                } else {
+                    contactCol = allContact;
+                    res.render('admin',{
+                        page:'Admin Page',
+                        menuId:'admin',
+                        contacts: allContact
+                    })
+                }
+            });
+        })
         console.log("Success login to Admin");
+        console.log(req.sessionID);
+        console.log(req.session);
     }
 })
 
-app.get("/admin", (req, res) => {
+
+const redirectLogin = (req, res, next) =>{
+    if(!req.session.username){
+        res.redirect('/login')
+    } else {
+        next()
+    }
+}
+
+app.get("/admin", redirectLogin,(req, res) => {
     client.connect( err =>{
         let contactCol = client.db("SEIS751_Final_Project").collection("contacts");
         Contact.find({}, function(err, allContact){
@@ -138,9 +165,6 @@ app.get("/admin", (req, res) => {
     })
 });
 
-app.get('/', function(req, res) {
-    res.send('Hello ' + JSON.stringify(req.session));
-});
 
 //======================================================
 //          ERROR HANDLER

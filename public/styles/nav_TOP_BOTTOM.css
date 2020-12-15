@@ -121,7 +121,7 @@ a:hover  svg {
     font-size: 12px;
     color: darkgray;
     text-transform: uppercase;
-    padding-left: 20px;
+    padding-left: 25px;
     text-decoration: none;
 }
 
@@ -157,6 +157,10 @@ a:hover  svg {
     display: inline-flex;
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+.footer-section{
+    margin-left: 20px;
 }
 
 .footer-col {
@@ -435,15 +439,29 @@ a:hover  svg {
     }
 
     /* FOOTER-2 */
+    .copyright-2{
+        padding-left: 10%;
+    }
     section.footer-2{
         position: relative;
+    }
+
+    .footer-col li{
+        padding-bottom: 3px;
+    }
+    .footer-col li a {
+        font-size: 12px;
+    }
+
+    .footer-col li a span {
+        font-size: 16px;
     }
 }
 
 /*==============================================
             monitor
 ================================================*/
-@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+@media only screen and (min-width: 1920px) {
     #mainlogo {
         padding-top: 2%;
         padding-left: 5%;
@@ -483,14 +501,16 @@ a:hover  svg {
     }
 
     .copyright{
-        font-size: 14px;
+        font-size: 16px;
     }
     .navbar-nav-footer {
         margin-right: 0;
     }
-
+    .navbar-nav-footer li{
+        padding-left: 15px;
+    }
     .navbar-nav-footer li a {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .footer-2 {
@@ -501,7 +521,8 @@ a:hover  svg {
     }
 
     .copyright-2 {
-        font-size: 14px;
+        font-size: 16px;
+        padding-left: 13%;
     }
 
     .footer-col {
@@ -510,11 +531,14 @@ a:hover  svg {
         list-style-type: none;
     }
 
+    .footer-col li{
+        padding-bottom: 5px;
+    }
     .footer-col li a {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .footer-col li a span {
-        font-size: 16px;
+        font-size: 18px;
     }
 }

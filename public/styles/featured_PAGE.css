@@ -1,4 +1,8 @@
-
+#featured-intro p{
+    font-family: "Nimbus", sans-serif;
+    font-size: 16px;
+    text-align: left;
+}
 .Hero {
     width: 100%;
     height: auto;
@@ -347,6 +351,9 @@
         font-size: 50px;
         text-align: center;
     }
+    #featured-intro p{
+        font-size: 20px;
+    }
     #latest-project{
         padding: 0 6% 0 6%;
     }
@@ -368,6 +375,9 @@
     #featured-intro .section-title{
         font-size: 55px;
         text-align: center;
+    }
+    #featured-intro p{
+        font-size: 20px;
     }
     #latest-project{
         padding: 0 20% 0 20%;

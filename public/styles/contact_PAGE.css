@@ -20,34 +20,33 @@
 }
 /* Location, Phone, Email Section */
 .contact-list {
+    font-family: "Nimbus", sans-serif;
     list-style-type: none;
     margin-top: 20px;
     margin-left: 5px;
 }
 
 .list-item {
-    line-height: 3;
+    font-family: "Nimbus", sans-serif;
+    line-height: 2;
     color: #aaa;
 }
 
 .contact-text {
-    font: 300 18px 'Lato', sans-serif;
-    letter-spacing: 1.9px;
-    color: #bbb;
+    font-family: "Nimbus", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #dedede;
 }
-
-
 .contact-text a {
-    color: #bbb;
+    color: #dedede;
     text-decoration: none;
     transition-duration: 0.2s;
 }
-
 .contact-text a:hover {
-    color: #fff;
+    color: #ffc13b;
     text-decoration: none;
 }
-
 
 /* Social Media Icons */
 .social-media-list {
@@ -88,12 +87,12 @@
     line-height: 50px;
     border-radius: 50%;
     opacity: 0;
-    box-shadow: 0 0 0 1px #fff;
+    box-shadow: 0 0 0 1px #ffc13b;
     transition: all .2s ease-in-out;
 }
 
 .social-media-list li:hover {
-    background-color: #fff;
+    background-color: #ffc13b;
 }
 
 .social-media-list li:hover:after {
@@ -279,8 +278,6 @@
     .form-control, textarea{
         width: 400px;
     }
-
-
 
     .contact-wrapper iframe{
         margin-left: 10%;
