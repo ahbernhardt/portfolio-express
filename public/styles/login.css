@@ -14,6 +14,7 @@
        margin-top: -60px;
        margin-left: -150px;
    }
+
 }
 
 /*====================================
@@ -77,5 +78,14 @@
     #login-page iframe{
         width: 650px;
         margin-left: -30px;
+    }
+    #thanks {
+        margin-top: 2%;
+        display: block;
+        text-align: center;
+    }
+    #thanks iframe{
+        width: 650px;
+        margin-left: 0;
     }
 }

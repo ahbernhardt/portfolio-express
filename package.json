@@ -1,9 +1,9 @@
 {
-  "name": "seis751-final-project",
+  "name": "porfolio-express",
   "version": "1.0.0",
   "author": "Anh nguyen",
   "license": "MIT",
-  "description": "Developer Portfolio Website Project for Web App. & Design Class",
+  "description": "Developer Portfolio Website Project for Web App & Design Class using Express",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
