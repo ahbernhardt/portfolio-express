@@ -192,7 +192,8 @@ module.exports = app;
 /*==========================================
         Start Server
 =============================================*/
-app.listen(8000, () => {
-    console.log(`server running on http://localhost:8000`);
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`server running on http://localhost:3000`);
 });
 
