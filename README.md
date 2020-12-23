@@ -1,5 +1,7 @@
 # Portfolio-Express
->Portfolio-v2 built with Express, Node, ejs, and deploy with  Heroku. [![Heroku](https://pyheroku-badge.herokuapp.com/?app=anguyen0208-express&style=<STYLE>)](https://anguyen0208-express.herokuapp.com/)<br>
+Portfolio-v2 built with Express, Node, ejs, and deploy with  Heroku. [![Heroku](https://pyheroku-badge.herokuapp.com/?app=anguyen0208-express&style=<STYLE>)](https://anguyen0208-express.herokuapp.com/)<br>
+>This is individual project for Web App & Design class.<br>
+
 Checkout for [Demo](https://anguyen0208-express.herokuapp.com/)
 
 ## Screenshot
